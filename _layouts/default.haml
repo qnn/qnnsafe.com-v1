@@ -1,0 +1,13 @@
+!!!
+/
+  Generated on {{ site.time }}, using Jekyll, Haml, Sass, CoffeeScript.
+  Source of this website can be found on https://github.com/qnn/qnnsafe.com-v1
+%html
+  %head
+    %meta{ charset: "UTF-8" }
+    %title {{ site.title }}
+    %script{ type: "text/javascript", src: "/assets/vendor/javascripts/jquery-1.10.2.min.js" }
+    {% javascript application %}
+    {% stylesheet application %}
+  %body
+    {{ content }}

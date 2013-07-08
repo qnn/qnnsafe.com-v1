@@ -1,0 +1,20 @@
+title: 全能官网
+
+assets:
+  dirname: assets
+  baseurl: /assets/
+  sources:
+    - _assets/images
+    - _assets/javascripts
+    - _assets/stylesheets
+  compress:
+    css: sass
+    js:  uglifier
+  cache_assets: true
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - Rakefile
+  - README.md
