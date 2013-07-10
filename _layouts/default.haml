@@ -14,19 +14,109 @@
       %a.logo{ href: "/" } 全能保险柜
     %nav
       %ul.nav
-        %li
+        %li<
           %a{ id: "nav-catalog", href: "/" } 所有产品
-        %li
+        %li<
           %a{ id: "nav-catalog", href: "/" } 全能简介
-        %li
+        %li<
           %a{ id: "nav-catalog", href: "/" } 服务与支持
-        %li
+        %li<
           %a{ id: "nav-catalog", href: "/" } 新闻中心
-        %li
+        %li<
           %a{ id: "nav-catalog", href: "/" } 招商加盟
-        %li
+        %li<
           %a{ id: "nav-catalog", href: "/" } 销售网点
         %li
           %form{ action: "http://www.qnnsafe.com/search.html", method: :get, class: "search" }
             %input{ type: :search, name: "q", placeholder: "搜索...", autocomplete: :off }
+      .catalog
+        %ul.line
+          %li
+            .figure
+            %h2 个人、商用系列
+            %ul.model
+              %li<
+                %a{ href: "/" } 全能金库
+              %li<
+                %a{ href: "/" } 风生水起
+              %li<
+                %a{ href: "/" } 指纹
+              %li<
+                %a{ href: "/" } 藏宝
+              %li<
+                %a{ href: "/" } 安固
+              %li<
+                %a{ href: "/" } 铁观音防火
+              %li<
+                %a{ href: "/" } 铁金钢
+          %li
+            .figure
+            %h2 个人、商用系列
+            %ul.model
+              %li<
+                %a{ href: "/" } 新皇冠
+              %li<
+                %a{ href: "/" } 高尔夫
+              %li<
+                %a{ href: "/" } 钢铁侠
+              %li<
+                %a{ href: "/" } 铁管家
+              %li<
+                %a{ href: "/" } 钢将军
+              %li<
+                %a{ href: "/" } 地藏
+              %li<
+                %a{ href: "/" } 蓝精灵
+          %li
+            .figure
+            %h2 办公、金融系列
+            %ul.model
+              %li<
+                %a{ href: "/" } 维纳斯
+              %li<
+                %a{ href: "/" } 双开门
+              %li<
+                %a{ href: "/" } 抽屉式
+              %li<
+                %a{ href: "/" } 金库门
+              %li<
+                %a{ href: "/" } 移动金库
+              %li<
+                %a{ href: "/" } 银行保管箱
+              %li<
+                %a{ href: "/" } 现金投包机
+              %li<
+                %a{ href: "/" } ATM柜员机
+              %li<
+                %a{ href: "/" } 油站投币柜
+          %li
+            .figure
+            %h2 酒店、储物系列
+            %ul.model
+              %li<
+                %a{ href: "/" } QNNSAFE客房柜
+              %li<
+                %a{ href: "/" } HOTSAFE客房柜
+              %li<
+                %a{ href: "/" } 前厅保管箱
+              %li<
+                %a{ href: "/" } 前厅投币柜
+              %li<
+                %a{ href: "/" } 保密柜
+              %li<
+                %a{ href: "/" } 寄存柜
+              %li<
+                %a{ href: "/" } 钥匙柜
+          %li
+            .figure
+            %h2 枪弹、物流系列
+            %ul.model
+              %li<
+                %a{ href: "/" } 枪弹柜
+              %li<
+                %a{ href: "/" } 弹药柜
+              %li<
+                %a{ href: "/" } 智能枪弹柜
+              %li<
+                %a{ href: "/" } 存取柜
     {{ content }}

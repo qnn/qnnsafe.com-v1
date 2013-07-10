@@ -1,5 +1,9 @@
 $max-width: 1000px;
 
+body {
+  font-family: Lobster,Arial,sans-serif;
+}
+
 header, nav, footer {
   margin: 0 auto;
   max-width: $max-width;
