@@ -2,17 +2,18 @@ $max-width: 1000px;
 
 body {
   font-family: Lobster,Arial,sans-serif;
+  padding: 0 10px;
 }
 
 header, nav, footer {
   margin: 0 auto;
   max-width: $max-width;
-  padding: 0 10px;
 }
 
 header {
   padding-top: 10px;
   padding-bottom: 10px;
+  background: #fff;
 }
 
 a.logo {
@@ -21,4 +22,17 @@ a.logo {
   width: 329px;
   height: 50px;
   text-indent: -9999px;
+}
+
+nav {
+  position: relative;
+  background: #fff;
+}
+
+#catalog {
+  position: absolute;
+  top: -500px;
+  z-index: -1;
+  left: 0;
+  right: 0;
 }
