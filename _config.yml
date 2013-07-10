@@ -1,5 +1,7 @@
 title: 全能官网
 
+url: http://www.qnnsafe.com
+
 assets:
   dirname: assets
   baseurl: /assets/
@@ -7,9 +9,9 @@ assets:
     - _assets/images
     - _assets/javascripts
     - _assets/stylesheets
-  compress:
-    css: sass
-    js:  uglifier
+  #compress:
+    #css: sass
+    #js:  uglifier
   cache_assets: true
 
 exclude:

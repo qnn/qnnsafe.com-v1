@@ -10,4 +10,23 @@
     {% javascript application %}
     {% stylesheet application %}
   %body
+    %header
+      %a.logo{ href: "/" } 全能保险柜
+    %nav
+      %ul.nav
+        %li
+          %a{ id: "nav-catalog", href: "/" } 所有产品
+        %li
+          %a{ id: "nav-catalog", href: "/" } 全能简介
+        %li
+          %a{ id: "nav-catalog", href: "/" } 服务与支持
+        %li
+          %a{ id: "nav-catalog", href: "/" } 新闻中心
+        %li
+          %a{ id: "nav-catalog", href: "/" } 招商加盟
+        %li
+          %a{ id: "nav-catalog", href: "/" } 销售网点
+        %li
+          %form{ action: "http://www.qnnsafe.com/search.html", method: :get, class: "search" }
+            %input{ type: :search, name: "q", placeholder: "搜索...", autocomplete: :off }
     {{ content }}
