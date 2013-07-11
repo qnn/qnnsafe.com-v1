@@ -2,10 +2,10 @@ $max-width: 1000px;
 
 body {
   font-family: Lobster,Arial,sans-serif;
-  padding: 0 10px;
+  padding: 0 15px;
 }
 
-header, nav, footer {
+header, nav, article, footer {
   margin: 0 auto;
   max-width: $max-width;
 }
@@ -14,6 +14,8 @@ header {
   padding-top: 10px;
   padding-bottom: 10px;
   background: #fff;
+  position: relative;
+  z-index: 50;
 }
 
 a.logo {
@@ -32,7 +34,7 @@ nav {
 #catalog {
   position: absolute;
   top: -500px;
-  z-index: -1;
+  z-index: 5;
   left: 0;
   right: 0;
 }
