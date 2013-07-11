@@ -3,6 +3,19 @@
     height: 530px;
     position: relative;
 
+    .link a {
+      display: block;
+      position: absolute;
+      z-index: 3;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      outline: none;
+      overflow: hidden;
+      text-indent: -9999px;
+    }
+
     .title {
       position: absolute;
       left: 80px;
