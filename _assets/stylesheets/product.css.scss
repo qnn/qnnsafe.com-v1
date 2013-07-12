@@ -110,9 +110,11 @@
   color: #666;
   outline: none;
   text-decoration: none;
+  border-radius: 25px;
+  border: 1px solid #D5D5D5;
 }
 
-//.mi-slider .nav a:hover,
+.mi-slider .nav a:active,
 .mi-slider .nav a.mi-selected {
   background: #F1F1F1;
   color: #666;

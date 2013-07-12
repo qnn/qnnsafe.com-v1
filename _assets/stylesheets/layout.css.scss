@@ -12,7 +12,7 @@ body {
 }
 
 body.page {
-  max-width: $max-width;
+  max-width: ($max-width + 30);
   margin: 0 auto;
   border: 1px solid #D9D9D9;
   border-top: none;
@@ -78,12 +78,12 @@ nav {
 }
 
 footer {
-  height: 50px;
   border-top: 1px solid #CCC;
-  margin-top: 10px;
+  margin-top: 30px;
   color: #666;
-  font-size: 13px;
+  font-size: 12px;
   line-height: 18px;
+  padding-bottom: 20px;
   a {
     color: #005CE7;
     text-decoration: none;
@@ -100,5 +100,8 @@ footer {
     float: right;
     padding-top: 10px;
     padding-right: 10px;
+  }
+  .clear {
+    clear: both;
   }
 }
