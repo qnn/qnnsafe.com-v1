@@ -1,8 +1,25 @@
 $max-width: 1000px;
 
+html {
+  background: #F2F2F2;
+  height: 100%;
+}
+
 body {
+  background: #fff;
+  min-height: 100%;
   font-family: Lobster,Arial,sans-serif;
-  padding: 0 15px;
+}
+
+body.page {
+  max-width: $max-width;
+  margin: 0 auto;
+  border: 1px solid #D9D9D9;
+  border-top: none;
+  border-bottom: none;
+  -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
 }
 
 header, nav, article, footer {
@@ -16,6 +33,11 @@ header {
   background: #fff;
   position: relative;
   z-index: 50;
+}
+
+header, nav {
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 a.logo {
@@ -35,6 +57,22 @@ nav {
   position: absolute;
   top: -500px;
   z-index: 5;
-  left: 0;
-  right: 0;
+  left: 15px;
+  right: 16px;
+}
+
+.top_divider {
+  position:relative;
+  overflow:hidden;
+  &:before {
+    content: ""; 
+    position:absolute; 
+    z-index: 1; 
+    width: 100%;  
+    top: -10px; 
+    height: 10px; 
+    left: 0%; 
+    border-radius: 200px / 5px;
+    box-shadow: 0 0 18px rgba(0, 0, 0, 0.5);
+  }
 }

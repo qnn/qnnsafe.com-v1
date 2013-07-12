@@ -1,5 +1,6 @@
 ---
 layout: default
+body_style: page
 ---
 %article
   #showcase.mi-slider
@@ -68,11 +69,4 @@ layout: default
     .nav
       %a{ href: "#"} PAGE 1
       %a{ href: "#"} PAGE 2
-  #billboard
-    .bb
-      .title
-        %img{ src: "/assets/images/billboards/gtx-5842/title.png" }
-      .subtitle
-        %img{ src: "/assets/images/billboards/gtx-5842/subtitle.png" }
-      .image
-        %img{ src: "/assets/images/billboards/gtx-5842/gtx-5842.jpg" }
+  {{ content }}
