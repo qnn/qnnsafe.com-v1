@@ -76,3 +76,29 @@ nav {
     box-shadow: 0 0 18px rgba(0, 0, 0, 0.5);
   }
 }
+
+footer {
+  height: 50px;
+  border-top: 1px solid #CCC;
+  margin-top: 10px;
+  color: #666;
+  font-size: 13px;
+  line-height: 18px;
+  a {
+    color: #005CE7;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  .left {
+    float: left;
+    padding-top: 10px;
+    padding-left: 10px;
+  }
+  .right {
+    float: right;
+    padding-top: 10px;
+    padding-right: 10px;
+  }
+}

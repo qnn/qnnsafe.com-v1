@@ -29,7 +29,7 @@
 
 .mi-slider {
 	position: relative;
-	height: 215px;
+	height: 240px;
 }
 
 .mi-slider ul {
@@ -95,6 +95,7 @@
 	text-align: center;
 	margin: 0 auto;
 	border-top: 1px solid #E0E0E0;
+  padding: 10px 0 0 0;
 }
 
 .no-js .nav {
@@ -108,16 +109,15 @@
   position: relative;
   color: #666;
   outline: none;
-  -webkit-transition: all 0.2s linear;
-  -moz-transition: all 0.2s linear;
-  transition: all 0.2s linear;
   text-decoration: none;
 }
 
-.mi-slider .nav a:hover,
+//.mi-slider .nav a:hover,
 .mi-slider .nav a.mi-selected {
-  background: #E0E0E0;
+  background: #F1F1F1;
   color: #666;
+  border-radius: 25px;
+  box-shadow: inset 0 1px 5px 0 #666;
 }
 
 /* Move classes and animations */
