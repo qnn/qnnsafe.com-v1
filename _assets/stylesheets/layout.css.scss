@@ -100,8 +100,29 @@ footer {
     float: right;
     padding-top: 10px;
     padding-right: 10px;
+    width: 200px;
+    line-height: 30px;
   }
   .clear {
     clear: both;
   }
+}
+
+.lang {
+margin: 0 2px;
+float: right;
+display: block;
+width: 34px;
+height: 34px;
+background: url(/assets/images/lang.png) no-repeat 0 0;
+text-indent: -9999px;
+text-align: left;
+}
+
+.lang-en {
+background-position: -40px 0;
+}
+
+.lang-zh {
+background-position: 0 0;
 }

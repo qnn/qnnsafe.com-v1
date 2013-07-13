@@ -27,8 +27,7 @@
         %li<
           %a{ id: "nav-stores", href: "/" } 销售网点
         %li
-          %form{ action: "http://www.qnnsafe.com/search.html", method: :get, class: "search" }
-            %input{ type: :search, name: "q", placeholder: "搜索...", autocomplete: :off }
+          %a{ id: "nav-contact", href: "/" } 联系我们
       #catalog.catalog
         %ul.line
           %li
@@ -127,6 +126,8 @@
         %br
         &copy; 1999-2013 广东安能保险柜制造有限公司 粤ICP备12015444号-1
       .right
-        %a{ href: "/news/" } 新闻中心
-        %a{ href: "/contact/" } 联系我们
+        选择你的国家或地区：
+        %a{ href: "http://www.qnnsafes.com/", class: "lang lang-en" } English
+        %a{ href: "/", class: "lang lang-zh" } 中文
+        .clear
       .clear
