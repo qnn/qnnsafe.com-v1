@@ -8,6 +8,8 @@ keywords: "保险柜,保险箱,家用保险柜,家用保险箱,保险柜十大�
 
 permalink: /:categories/:title.html
 
+relative_permalinks: false
+
 assets:
   dirname: assets
   baseurl: /assets/
