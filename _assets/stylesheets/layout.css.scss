@@ -22,7 +22,7 @@ body.page {
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
 }
 
-header, nav, article, footer {
+header, nav, article, footer, .wide {
   margin: 0 auto;
   max-width: $max-width;
 }
@@ -79,15 +79,15 @@ nav {
 
 footer {
   border-top: 1px solid #CCC;
-  margin-top: 30px;
   color: #666;
   font-size: 12px;
   line-height: 18px;
   padding-bottom: 20px;
   a {
-    color: #005CE7;
+    color: #666;
     text-decoration: none;
     &:hover {
+      color: #005CE7;
       text-decoration: underline;
     }
   }
@@ -129,4 +129,15 @@ background-position: 0 0;
 
 .hidden {
   display: none;
+}
+
+#newsslider {
+  .sliderkit-panels {
+    width: $max-width;
+  }
+  span.date {
+    margin-left: 6px;
+    font-size: 12px;
+    color: #adadad;
+  }
 }

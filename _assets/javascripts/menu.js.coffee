@@ -33,3 +33,14 @@ jQuery ($) ->
     that = $('#nav-catalog')
     if that.hasClass('active')
       close_catalog(that)
+  # news slider
+  1 == $("#newsslider").length && $("#newsslider").sliderkit({
+      auto: !0,
+      autospeed: 5000,
+      circular: !0,
+      shownavitems: 1,
+      panelfx: "sliding",
+      panelfxspeed: 500,
+      verticalnav: !0,
+      verticalslide: !0
+  });

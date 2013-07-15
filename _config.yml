@@ -6,6 +6,8 @@ description: "广东安能保险柜制造有限公司旗下QNNsafe全能保险�
 
 keywords: "保险柜,保险箱,家用保险柜,家用保险箱,保险柜十大品牌,全能保险柜"
 
+permalink: /:categories/:title.html
+
 assets:
   dirname: assets
   baseurl: /assets/

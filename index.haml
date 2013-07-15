@@ -21,3 +21,13 @@ layout: default
       %a{ href: "/", class: "promo_03" }
     %li
       %a{ href: "/", class: "promo_04" }
+#newsslider.wide.sliderkit.newslider-minimal
+  .sliderkit-panels
+    {% for post in site.categories["news"] limit:300 %}
+    .sliderkit-panel<
+      = '〔'
+      %a{ href: '/news/', title: '{{ post.type }}' }<> {{ post.type }}
+      〕
+      %a{ href: '{{ post.url }}', title: '{{ post.title }}' } {{ post.title }}
+      %span.date {{ post.date | date:"%Y年%m月%d日" }}
+    {% endfor %}
