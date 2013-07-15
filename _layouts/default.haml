@@ -1,7 +1,4 @@
 !!!
-/
-  Generated on {{ site.time }}, using Jekyll, Haml, Sass, CoffeeScript.
-  Source of this website can be found on https://github.com/qnn/qnnsafe.com-v1
 %html.no-js
   %head
     %meta{ charset: "UTF-8" }
@@ -18,7 +15,7 @@
       %ul.nav
         %li<
           %a{ id: "nav-catalog", href: "/" } 全能产品库
-        %li<
+        %li{ class: "{% if page.url contains '/about/' %}active{% endif %}" }<
           %a{ id: "nav-about", href: "/about/" } 认识全能
         %li<
           %a{ id: "nav-news", href: "/news/" } 新闻中心
@@ -130,3 +127,6 @@
         %a{ href: "/", class: "lang lang-zh" } 中文
         .clear
       .clear
+  /
+    Generated on {{ site.time }}, using Jekyll, Haml, Sass, CoffeeScript.
+    Source of this website can be found on https://github.com/qnn/qnnsafe.com-v1
