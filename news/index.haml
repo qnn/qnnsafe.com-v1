@@ -1,0 +1,14 @@
+---
+layout: default
+body_style: page
+permalink: /news/
+---
+%article
+  #newslist.center_content
+    %ul
+      {% for post in site.categories["news"] %}
+      %li
+        %em {{ post.date | date:'%Y-%m-%d' }}
+        〔{{ post.type }}〕
+        %a{ href: '{{ post.url }}' } {{ post.title }}
+      {% endfor %}

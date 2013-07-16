@@ -1,0 +1,10 @@
+---
+layout: default
+body_style: page
+---
+%article
+  #newsinfo.content.center_content
+    %h2.center {{ page.title }}
+    %em 分类：{{ page.type }} | 发表日期：{{ page.date | date:'%Y-%m-%d' }}
+  #newscontent.content.center_content
+    {{ content }}

@@ -222,6 +222,14 @@ background-position: 0 0;
     margin-bottom: 15px;
   }
 
+  a {
+    color: #005CE7;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
   small {
     font-size: 11px;
   }

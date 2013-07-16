@@ -17,7 +17,7 @@
           %a{ id: "nav-catalog", href: "/" } 全能产品库
         %li{ class: "{% if page.url contains '/about/' %}active{% endif %}" }<
           %a{ id: "nav-about", href: "/about/" } 认识全能
-        %li<
+        %li{ class: "{% if page.url contains '/news/' %}active{% endif %}" }<
           %a{ id: "nav-news", href: "/news/" } 新闻中心
         %li<
           %a{ id: "nav-support", href: "/support/" } 服务与支持
