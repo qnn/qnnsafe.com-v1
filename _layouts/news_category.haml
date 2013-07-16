@@ -5,6 +5,19 @@ title: 新闻中心
 ---
 %article
   .block.h50px
+  -# 请同时更改 news/index.haml
+  .page_nav
+    %ul
+      %li
+        %a{ href: "/news/" } 新闻中心
+      %li{ class: "{% if page.type_eng == 'enterprise-news' %}active{% endif %}" }
+        %a{ href: "/news/enterprise-news/" } 企业动态
+      %li{ class: "{% if page.type_eng == 'media-reports' %}active{% endif %}" }
+        %a{ href: "/news/media-reports/" } 媒体报道
+      %li{ class: "{% if page.type_eng == 'brand-activities' %}active{% endif %}" }
+        %a{ href: "/news/brand-activities/" } 品牌活动
+      %li{ class: "{% if page.type_eng == 'industry-news' %}active{% endif %}" }
+        %a{ href: "/news/industry-news/" } 行业新闻
   #newslist.center_content
     %ul
       {% for post in site.categories["news"] %}{% if post.type_eng == page.type_eng %}

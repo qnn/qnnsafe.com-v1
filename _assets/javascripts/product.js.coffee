@@ -1,6 +1,6 @@
 jQuery ($) ->
   $('#showcase').catslider();
-  $('.page_nav').find('a').click (e) ->
+  $('.page_nav.is_pager').find('a').click (e) ->
     e.preventDefault()
     $(this).parent().siblings('li').removeClass('active')
     $(this).parent().addClass('active')

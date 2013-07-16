@@ -5,12 +5,27 @@ permalink: /news/
 ---
 %article
   .block.h50px
+  -# 请同时更改 _layouts/news_category.haml
+  .page_nav
+    %ul
+      %li.active
+        %a{ href: "/news/" } 新闻中心
+      %li
+        %a{ href: "/news/enterprise-news/" } 企业动态
+      %li
+        %a{ href: "/news/media-reports/" } 媒体报道
+      %li
+        %a{ href: "/news/brand-activities/" } 品牌活动
+      %li
+        %a{ href: "/news/industry-news/" } 行业新闻
   #newslist.center_content
     %ul
       {% for post in site.categories["news"] %}
-      %li
+      %li<
         %em {{ post.date | date:'%Y-%m-%d' }}
-        〔{{ post.type }}〕
+        = '〔'
+        %a{ href: '/news/{{ post.type_eng }}/' }<> {{ post.type }}
+        〕
         %a{ href: '{{ post.url }}' } {{ post.title }}
       {% endfor %}
   .block.h50px

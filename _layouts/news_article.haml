@@ -5,7 +5,11 @@ body_style: page
 %article
   #newsinfo.content.center_content
     %h2.center {{ page.title }}
-    %em 分类：{{ page.type }} | 发表日期：{{ page.date | date:'%Y-%m-%d' }}
+    %em
+      分类：
+      %a{ href: '/news/{{ page.type_eng }}/' }> {{ page.type }}
+      = ' |'
+      发表日期：{{ page.date | date:'%Y-%m-%d' }}
   #newscontent.content.center_content
     {{ content }}
   .block.h50px
