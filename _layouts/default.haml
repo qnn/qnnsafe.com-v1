@@ -23,7 +23,7 @@
           %a{ id: "nav-support", href: "/support/" } 服务与支持
         %li<
           %a{ id: "nav-franchise", href: "/", target: "_blank" } 招商加盟
-        %li<
+        %li{ class: "{% if page.url contains '/stores/' %}active{% endif %}" }<
           %a{ id: "nav-stores", href: "/stores/" } 销售网点
         %li{ class: "{% if page.url contains '/contact/' %}active{% endif %}" }<
           %a{ id: "nav-contact", href: "/contact/" } 联系我们

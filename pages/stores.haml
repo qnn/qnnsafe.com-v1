@@ -1,0 +1,39 @@
+---
+layout: default
+body_style: page
+permalink: /stores/
+title: 全能代理商
+---
+:javascript
+  window.STORES_SRC = '{% asset_path stores %}';
+%article
+  .block.h50px
+  #stores
+    #stores-filter
+      %h3 查找离您最近的经销商和维修网点
+      .select
+        %select#province
+          %option{ value: '' } 选择省份/直辖市
+      .select
+        %select#city
+          %option{ value: '' } 选择城市
+    %table#stores-list.table
+      %thead.table-head
+        %tr
+          %th 店铺名称
+          %th 省份
+          %th 城市
+          %th 县/区
+          %th 地址
+          %th 联系电话
+          %th 联系人
+          %th 备注
+      %tbody.table-body
+        %tr#ifnone
+          %td{ colspan: 8 } 请选择距离您最近的城市。
+      %tfoot.table-foot
+        %tr
+          %td{ colspan: 8 }
+            %span#stores_count
+            条记录
+  .block.h50px
