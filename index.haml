@@ -26,7 +26,7 @@ layout: default
     {% for post in site.categories["news"] limit:300 %}
     .sliderkit-panel<
       = '〔'
-      %a{ href: '/news/', title: '{{ post.type }}' }<> {{ post.type }}
+      {{ post.type }}
       〕
       %a{ href: '{{ post.url }}', title: '{{ post.title }}' } {{ post.title }}
       %span.date {{ post.date | date:"%Y年%m月%d日" }}
