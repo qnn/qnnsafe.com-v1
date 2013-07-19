@@ -1,0 +1,53 @@
+.banner {
+  height: 200px;
+  margin: 10px 0 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+.banner-qnn {
+  background: url(/assets/images/banners/qnn_wide.jpg) no-repeat center;
+}
+
+.banner-desert {
+  background: url(/assets/images/banners/desert.jpg) no-repeat center;
+}
+
+.banner-tao {
+  background: url(/assets/images/banners/tao.jpg) no-repeat center;
+}
+
+.banner-honors {
+  background: url(/assets/images/banners/honors.jpg) no-repeat center;
+}
+
+.banner-text {
+  background: url(/assets/images/banners/banner-sprites.png) no-repeat 0 0;
+  width: 200px;
+  height: 65px;
+  position: absolute;
+}
+
+.banner-text-qnn {
+  background-position: 0 0;
+  left: 50%;
+  top: 40%;
+}
+
+.banner-text-desert {
+  background-position: 0 -74px;
+  left: 30%;
+  top: 40%;
+}
+
+.banner-text-tao {
+  background-position: 0 -209px;
+  left: 50%;
+  top: 40%;
+}
+
+.banner-text-honors {
+  background-position: 0 -142px;
+  left: 50%;
+  top: 40%;
+}
