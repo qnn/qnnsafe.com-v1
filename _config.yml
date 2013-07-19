@@ -14,7 +14,7 @@ assets:
   dirname: assets
   baseurl: /assets/
   sources:
-    _ .
+    - .
     - _assets/images
     - _assets/javascripts
     - _assets/stylesheets
@@ -29,3 +29,4 @@ exclude:
   - LICENSE
   - Rakefile
   - README.md
+  - stores.js
