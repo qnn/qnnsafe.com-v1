@@ -14,11 +14,14 @@ task :preview do
   exec 'jekyll serve --watch'
 end
 
+def stores_json
+  File.expand_path('../stores.js', __FILE__)
+end
+
 def get_stores
   require 'json'
   require 'unicode_utils'
   require 'fileutils'
-  stores_json = File.expand_path('../stores.js', __FILE__)
   stores = IO.read(stores_json)
   stores.gsub!(/(\/\*{js}\*\/).*\1/, '')
   JSON.parse(stores)
