@@ -77,3 +77,42 @@
   }
 
 }
+
+
+.cc {
+  height: 399px;
+  position: relative;
+
+  .title {
+    position: absolute;
+    z-index: 1;
+    right: 0px;
+    top: 150px;
+  }
+
+  .image {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+  }
+
+}
+
+.cc-r2l {
+  height: 399px;
+  position: relative;
+
+  .title {
+    position: absolute;
+    z-index: 1;
+    left: 0px;
+    top: 150px;
+  }
+
+  .image {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+
+}
