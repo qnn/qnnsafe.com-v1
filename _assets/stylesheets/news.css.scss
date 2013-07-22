@@ -3,11 +3,13 @@
     font-size: 14px;
     line-height: 20px;
     padding: 3px 0;
+    color: #666;
     a {
-      color: #005CE7;
+      color: #353535;
       text-decoration: none;
       &:hover {
-        text-decoration: underline;
+        color: #005CE7;
+        text-decoration: none;
       }
     }
     em {

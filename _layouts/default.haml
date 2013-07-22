@@ -15,7 +15,7 @@
       %ul.nav
         %li<
           %a{ id: "nav-catalog", href: "/" } 全能产品库
-        %li{ class: "{% if page.url contains '/about/' %}active{% endif %}" }<
+        %li{ class: "{% if page.belongs_to == 'about' %}active{% endif %}" }<
           %a{ id: "nav-about", href: "/about/" } 认识全能
         %li{ class: "{% if page.url contains '/news/' %}active{% endif %}" }<
           %a{ id: "nav-news", href: "/news/" } 新闻中心
@@ -25,7 +25,7 @@
           %a{ id: "nav-franchise", href: "/", target: "_blank" } 招商加盟
         %li{ class: "{% if page.url contains '/stores/' %}active{% endif %}" }<
           %a{ id: "nav-stores", href: "/stores/" } 销售网点
-        %li{ class: "{% if page.url contains '/contact/' %}active{% endif %}" }<
+        %li{ class: "{% if page.belongs_to == 'contact' %}active{% endif %}" }<
           %a{ id: "nav-contact", href: "/contact/" } 联系我们
       #catalog.catalog
         %ul.line
