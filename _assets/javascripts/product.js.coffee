@@ -8,3 +8,10 @@ jQuery ($) ->
     children = $(this).closest('.page_nav').siblings('.pages').children()
     children.filter(':visible').fadeOut 'fast', ->
       children.eq(index).fadeIn 'fast'
+
+  $('#product_details .cc .image').delay(500).animate { right: "+=50", opacity: 1  }, 200, ->
+    $('#product_details .cc .title').animate { left: "-=50", opacity: 1  }, 200
+  $('#product_details .cc').hover ->
+    $(this).find('.hover').removeClass('hidden')
+  , ->
+    $(this).find('.hover').addClass('hidden')

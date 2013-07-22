@@ -78,8 +78,34 @@
 
 }
 
-
 .cc {
+  height: 500px;
+  position: relative;
+
+  .title {
+    position: absolute;
+    z-index: 1;
+    opacity: 0;
+    left: 70px;
+    top: 130px;
+  }
+
+  .image {
+    position: absolute;
+    opacity: 0;
+    right: 20px;
+    top: 50px;
+  }
+
+  .hover {
+    position: absolute;
+    z-index: 1;
+    right: 0px;
+    top: 0px;
+  }
+}
+
+.cc-l2r {
   height: 399px;
   position: relative;
 
