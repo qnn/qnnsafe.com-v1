@@ -1,7 +1,14 @@
 #billboard {
+  height: 540px;
+  position: relative;
+  overflow: hidden;
+
   .bb {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
     height: 540px;
-    position: relative;
 
     .link a {
       display: block;
@@ -14,6 +21,10 @@
       outline: none;
       overflow: hidden;
       text-indent: -9999px;
+    }
+
+    .one {
+      top: 150px !important;
     }
 
     .title {
