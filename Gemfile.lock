@@ -1,3 +1,12 @@
+GIT
+  remote: https://github.com/Empact/roo.git
+  revision: f004b6afe7bcb58b46f8cad8a599aa450992590a
+  specs:
+    roo (1.11.2)
+      nokogiri
+      rubyzip
+      spreadsheet (> 0.6.4)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -29,13 +38,20 @@ GEM
     liquid (2.5.0)
     maruku (0.6.1)
       syntax (>= 1.0.0)
+    mini_portile (0.5.1)
     multi_json (1.7.7)
+    nokogiri (1.6.0)
+      mini_portile (~> 0.5.0)
     posix-spawn (0.3.6)
     pygments.rb (0.5.1)
       posix-spawn (~> 0.3.6)
       yajl-ruby (~> 1.1.0)
     rack (1.5.2)
+    ruby-ole (1.2.11.7)
+    rubyzip (0.9.9)
     safe_yaml (0.7.1)
+    spreadsheet (0.8.7)
+      ruby-ole (>= 1.0)
     sprockets (2.10.0)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -53,4 +69,5 @@ DEPENDENCIES
   haml
   jekyll
   jekyll-assets
+  roo!
   unicode_utils

@@ -27,6 +27,39 @@ def get_stores
   JSON.parse(stores)
 end
 
+desc 'Convert Excel (.xls) to stores.js'
+task :convert do
+  xls = File.expand_path('../stores.xls', __FILE__)
+
+  puts "Error: Where is stores.xls ?" and exit unless File.exists?(xls)
+
+  require 'roo'
+  excel = Roo::Spreadsheet.open(xls)
+  csv = excel.to_csv
+
+  lines = []
+  csv.each_line do |line|
+    line.sub!(/.*?,/, '')
+    line.sub!(/,$/, '')
+    line.gsub!(/"(true|false)"/, '\1')
+    line.gsub!(/,(\d+),/, ',"\1",')
+    3.times do
+      line.gsub!(/,,/, ',"",')
+    end
+    line.chomp!
+    line = "[#{line}]"
+    line.sub!(',]', ',false]') # temp fix
+    line = line.reverse.sub('","","', '","').reverse if line.count(',') == 10 # temp fix
+    lines << line
+  end
+  lines.delete_at(0)
+  all_lines = lines.join(",\n")
+  js = "/*{js}*/ window.STORES = /*{js}*/\n[\n#{all_lines}\n]"
+  File.open(stores_json, 'w') do |file|
+    file.puts js
+  end
+end
+
 desc 'Beautify stores.js'
 task :beautify do
   stores = get_stores
@@ -34,6 +67,16 @@ task :beautify do
   all_widths = stores.map do |store|
     store.map do |info|
       UnicodeUtils.display_width(info.to_s)
+    end
+  end
+
+  # check lengths
+  first_w = 0
+  all_widths.each_index do |i|
+    first_w = all_widths[i].length if i ==0
+    if first_w != all_widths[i].length
+      puts stores[i].inspect
+      exit
     end
   end
 
