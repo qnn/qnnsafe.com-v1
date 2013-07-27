@@ -7,7 +7,7 @@ body_style: page
     %h2.center {{ page.title }}
     %em
       分类：
-      %a{ href: '/knowledge/{{ page.type_eng }}/' }> {{ page.type }}
+      {{ page.type }}
       = ' |'
       发表日期：{{ page.date | date:'%Y-%m-%d' }}
   #newscontent.content.center_content
