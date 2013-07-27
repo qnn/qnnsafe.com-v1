@@ -11,16 +11,14 @@ description: 保险柜的功能简单来说是防盗、防火，不因被盗或�
   -# 请同时更改 _layouts/knowledge_category.haml
   .page_nav
     %ul
+      %li
+        %a{ href: "/support/" } 服务与支持
+      %li
+        %a{ href: "/support/manual/" } 产品说明书
       %li.active
-        %a{ href: "/news/" } 新闻中心
-      %li
-        %a{ href: "/news/enterprise-news/" } 企业动态
-      %li
-        %a{ href: "/news/media-reports/" } 媒体报道
-      %li
-        %a{ href: "/news/brand-activities/" } 品牌活动
-      %li
-        %a{ href: "/news/industry-news/" } 行业新闻
+        %a{ href: "/knowledge/" } 产品知识
+      %li.active
+        %a{ href: "/support/clean/" } 清洁保养
   #knowledgelist.center_content
     %ul
       {% for post in site.categories["knowledge"] %}
