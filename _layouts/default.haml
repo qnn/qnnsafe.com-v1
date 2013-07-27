@@ -4,7 +4,7 @@
     %meta{ charset: "UTF-8" }
     %title {% if page.full_title %}{{ page.full_title }}{% else %}{% if page.title %}{{ page.title }}-{% endif %}{{ site.title }}{% endif %}
     %meta{ name: 'keywords', content: '{% if page.keywords %}{{ page.keywords }}{% else %}{{ site.keywords }}{% endif %}' }
-    %meta{ content: '{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}', name: 'description' }    
+    %meta{ content: '{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}', name: 'description' }
     %script{ type: "text/javascript", src: "/assets/vendor/javascripts/jquery-1.10.2.min.js" }
     {% javascript application %}
     {% stylesheet application %}
@@ -19,7 +19,7 @@
           %a{ id: "nav-about", href: "/about/" } 认识全能
         %li{ class: "{% if page.url contains '/news/' %}active{% endif %}" }<
           %a{ id: "nav-news", href: "/news/" } 新闻中心
-        %li<
+        %li{ class: "{% if page.belongs_to == 'support' %}active{% endif %}" }<
           %a{ id: "nav-support", href: "/support/" } 服务与支持
         %li<
           %a{ id: "nav-franchise", href: "/", target: "_blank" } 招商加盟
