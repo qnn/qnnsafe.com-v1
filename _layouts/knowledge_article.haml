@@ -3,13 +3,13 @@ layout: default
 body_style: page
 ---
 %article
-  #knowledgeinfo.content.center_content
+  #newsinfo.content.center_content
     %h2.center {{ page.title }}
     %em
       分类：
       %a{ href: '/knowledge/{{ page.type_eng }}/' }> {{ page.type }}
       = ' |'
       发表日期：{{ page.date | date:'%Y-%m-%d' }}
-  #knowledgescontent.content.center_content
+  #newscontent.content.center_content
     {{ content }}
   .block.h50px
