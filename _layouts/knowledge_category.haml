@@ -8,15 +8,13 @@ body_style: page
   .page_nav
     %ul
       %li
-        %a{ href: "/news/" } 新闻中心
-      %li{ class: "{% if page.type_eng == 'enterprise-news' %}active{% endif %}" }
-        %a{ href: "/news/enterprise-news/" } 企业动态
-      %li{ class: "{% if page.type_eng == 'media-reports' %}active{% endif %}" }
-        %a{ href: "/news/media-reports/" } 媒体报道
-      %li{ class: "{% if page.type_eng == 'brand-activities' %}active{% endif %}" }
-        %a{ href: "/news/brand-activities/" } 品牌活动
-      %li{ class: "{% if page.type_eng == 'industry-news' %}active{% endif %}" }
-        %a{ href: "/news/industry-news/" } 行业新闻
+        %a{ href: "/support/" } 服务与支持
+      %li
+        %a{ href: "/support/manual/" } 产品说明书
+      %li.active
+        %a{ href: "/knowledge/" } 产品知识
+      %li
+        %a{ href: "/support/clean/" } 清洁保养
   #newslist.center_content
     %ul
       {% for post in site.categories["knowledge"] %}{% if post.type_eng == page.type_eng %}
