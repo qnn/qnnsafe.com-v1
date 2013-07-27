@@ -18,5 +18,5 @@ jQuery ($) ->
                 next = $('#billboard .bb:first')
               next.addClass('active')
               loopslider()
-        , 8000
+        , 4000
   loopslider()
