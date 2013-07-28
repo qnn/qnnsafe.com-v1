@@ -32,6 +32,10 @@
 	height: 240px;
 }
 
+.shorter {
+  height: 210px;
+}
+
 .mi-slider ul {
 	list-style-type: none;
 	position: absolute;
@@ -112,6 +116,7 @@
   text-decoration: none;
   border-radius: 25px;
   border: 1px solid #D5D5D5;
+  margin: 0 5px;
 }
 
 .mi-slider .nav a:active,

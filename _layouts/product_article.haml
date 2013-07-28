@@ -5,78 +5,20 @@ body_style: page
 %article
   #showcase.mi-slider
     %ul
+      {% for post in site.categories["products"] %}{% if post.type == page.type %}
       %li
-        %a{ href: "/gtx-9050.html" }
-          %img{ src: "http://test.html9.com/products/gtx-9050-01.jpg" }
+        %a{ href: "{{ post.url }}", title: "{{ post.title }}" }
+          %img{ src: "http://test.html9.com/products/{{ post.images[0] }}" }
           %br
-          GTX-9050
-      %li
-        %a{ href: "/gtx-6845.html" }
-          %img{ src: "http://test.html9.com/products/gtx-6845-01.jpg" }
-          %br
-          GTX-6845
-      %li
-        %a{ href: "/gtx-5842.html" }
-          %img{ src: "http://test.html9.com/products/gtx-5842-01.jpg" }
-          %br
-          GTX-5842
-      %li
-        %a{ href: "/gtx-4542.html" }
-          %img{ src: "http://test.html9.com/products/gtx-4542-01.jpg" }
-          %br
-          GTX-4542
-      %li
-        %a{ href: "/gtx-3345.html" }
-          %img{ src: "http://test.html9.com/products/gtx-3345-01.jpg" }
-          %br
-          GTX-3345
-      %li
-        %a{ href: "/gtx-15870.html" }
-          %img{ src: "http://test.html9.com/products/gtx-ty.jpg" }
-          %br
-          GTX-15870
-    %ul
-      %li
-        %a{ href: "/gtx-9050.html" }
-          %img{ src: "http://test.html9.com/products/gtx-9050-01.jpg" }
-          %br
-          GTX-9050
-      %li
-        %a{ href: "/gtx-6845.html" }
-          %img{ src: "http://test.html9.com/products/gtx-6845-01.jpg" }
-          %br
-          GTX-6845
-      %li
-        %a{ href: "/gtx-5842.html" }
-          %img{ src: "http://test.html9.com/products/gtx-5842-01.jpg" }
-          %br
-          GTX-5842
-      %li
-        %a{ href: "/gtx-4542.html" }
-          %img{ src: "http://test.html9.com/products/gtx-4542-01.jpg" }
-          %br
-          GTX-4542
-      %li
-        %a{ href: "/gtx-3345.html" }
-          %img{ src: "http://test.html9.com/products/gtx-3345-01.jpg" }
-          %br
-          GTX-3345
-      %li
-        %a{ href: "/gtx-15870.html" }
-          %img{ src: "http://test.html9.com/products/gtx-ty.jpg" }
-          %br
-          GTX-15870
+          {{ post.title }}
+      {% endif %}{% endfor %}
     .nav
-      %a{ href: "#"} 1
-      %a{ href: "#"} 2
   .page_nav.is_pager
     %ul
       %li.active
         %a{ href: "#" } 产品概览
       %li
-        %a{ href: "#" } 功能特性/参数
-      %li
-        %a{ href: "#" } 说明书
+        %a{ href: "#" } 同系列产品对比
       %li
         %a{ href: "#" } 常见问题
   {% if content == "" %}
@@ -85,8 +27,6 @@ body_style: page
       {{ page.features | replace:'%PRODIMGS%',site.prodimgs }}
     #specs.hidden
       {{ page.spec_details | replace:'%PRODIMGS%',site.prodimgs }}
-    #manual.hidden
-      {{ page.manual | replace:'%PRODIMGS%',site.prodimgs }}
     #faq.content.hidden
       {% haml faq.haml %}
   {% else %}
