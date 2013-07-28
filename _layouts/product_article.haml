@@ -5,8 +5,8 @@ body_style: page
 %article
   #showcase.mi-slider
     %ul
-      {% for post in site.categories["products"] %}{% if post.type == page.type %}
-      %li
+      {% for post in site.categories["products"] reversed %}{% if post.type == page.type %}
+      %li{ class: "{% if page.name == post.name %}current{% endif %}" }
         %a{ href: "{{ post.url }}", title: "{{ post.title }}" }
           %img{ src: "http://test.html9.com/products/{{ post.images[0] }}" }
           %br
