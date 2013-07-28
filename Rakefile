@@ -127,3 +127,33 @@ task :make_index do
     puts "  \"#{key}\": " + assoc[key].to_s
   end
 end
+
+desc 'Copy old product details'
+task :copy_old do
+  require 'yaml'
+  old = File.expand_path('../products/_posts_old/', __FILE__)
+  current = File.expand_path('../products/_posts/', __FILE__)
+  Dir.chdir(old)
+  Dir.entries('.').each do |entry|
+    if File.file?(entry)
+      file = IO.read(entry)
+      yaml = YAML.load(file)
+      current_file = File.join(current, entry.sub(/\.md$/, '.haml'))
+      if File.exists?(current_file)
+        new_content = IO.read(current_file)
+        new_content = YAML.load(new_content)
+        new_content["images"] = yaml["images"]
+        new_content["features"] = yaml["features"].gsub(/\s*?\n/, "\n")
+        new_content["spec_details"] = yaml["spec_details"].gsub(/\s*?\n/, "\n")
+        new_content["manual"] = yaml["manual"].gsub(/\s*?\n/, "\n")
+        new_content = new_content.to_yaml.gsub(/^(type|specs):\s/, "\n\\1: ")
+        new_content.gsub!(/^(images):\s/, "\n\\1:\n")
+        new_content.gsub!(/^(features|spec_details|manual):\s\|$/, "\n\\1: |")
+        new_content = "#{new_content}\n---\n"
+        File.open(current_file, 'w') do |file|
+          file.write new_content
+        end
+      end
+    end
+  end
+end
