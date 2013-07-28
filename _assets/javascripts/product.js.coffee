@@ -3,7 +3,7 @@ jQuery ($) ->
   count = Math.ceil(children / 6)
   for page in [2..count]
     ul = $('<ul />').insertAfter('#showcase > ul:last')
-    for item in [(page-1)*6..page*6]
+    for item in [(page-1)*6..page*6-1]
       child = $('#showcase > ul:first > li').eq(item)
       if child.length == 1
         ul.append(child.clone())
