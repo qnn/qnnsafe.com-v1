@@ -69,4 +69,29 @@ body_style: page
     .nav
       %a{ href: "#"} 1
       %a{ href: "#"} 2
-  {{ content }}
+  .page_nav.is_pager
+    %ul
+      %li.active
+        %a{ href: "#" } 产品概览
+      %li
+        %a{ href: "#" } 功能特性/参数
+      %li
+        %a{ href: "#" } 说明书
+      %li
+        %a{ href: "#" } 常见问题
+  {% if content == "" %}
+  .pages.narrow
+    #product_details
+      {{ page.features | replace:'%PRODIMGS%',site.prodimgs }}
+    #specs.hidden
+      {{ page.spec_details | replace:'%PRODIMGS%',site.prodimgs }}
+    #manual.hidden
+      {{ page.manual | replace:'%PRODIMGS%',site.prodimgs }}
+    #faq.content.hidden
+      {% haml faq.haml %}
+  {% else %}
+  .pages
+    {{ content }}
+    #faq.content.hidden
+      {% haml faq.haml %}
+  {% endif %}
