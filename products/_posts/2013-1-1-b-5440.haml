@@ -47,5 +47,35 @@ images:
       %img{ src: "http://images.qnnsafe.com/v1/b5540_text_07.png" }
     .image
       %img{ src: "http://images.qnnsafe.com/v1/b5540_06.jpg" }
-#compare.hidden
-  pending
+#compare.narrow.hidden
+  %table#compare_table.table
+    %thead.table-head
+      %tr
+        %th 型号
+        %th 尺寸
+        %th 门
+        %th 箱
+        %th 净重
+    %tbody.table-body
+      %tr
+        %td B-4538
+        %td (高)450x(宽)380x(深)360mm
+        %td 12mm
+        %td 8mm
+        %td 82公斤
+      %tr.highlight
+        %td B-5440
+        %td (高)540x(宽)400x(深)380mm
+        %td 12mm
+        %td 8mm
+        %td 100公斤
+      %tr
+        %td B-7348
+        %td (高)730x(宽)480x(深)400mm
+        %td 12mm
+        %td 8mm
+        %td 145公斤
+    %tfoot.table-foot
+      %tr
+        %td{ colspan: 5 }
+          粗体行表示当前型号
