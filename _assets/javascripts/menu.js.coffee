@@ -1,6 +1,8 @@
 jQuery ($) ->
   # hover effects of links in product catalog popup
   sc_size = -110
+  $('#catalog .figure').each (a,b) ->
+    $(b).css('background-position', (a * sc_size) + 'px ' + '0' )
   $('ul.model').each (a,b) ->
     figure = $(b).siblings('.figure')
     $('a', b).hover ->
