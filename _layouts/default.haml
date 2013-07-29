@@ -19,6 +19,8 @@
           %a{ id: "nav-about", href: "/about/" } 认识全能
         %li{ class: "{% if page.url contains '/news/' %}active{% endif %}" }<
           %a{ id: "nav-news", href: "/news/" } 新闻中心
+        %li{ class: "{% if page.belongs_to == 'cases' %}active{% endif %}" }<
+          %a{ id: "nav-cases", href: "/cases/" } 工程案例
         %li{ class: "{% if page.belongs_to == 'support' %}active{% endif %}" }<
           %a{ id: "nav-support", href: "/support/" } 服务与支持
         %li<
@@ -33,7 +35,7 @@
             .figure
             %ul.model
               %li<
-                %a{ href: "/b-4538.html" } 全能金库
+                %a{ href: "/b-5440.html" } 全能金库
               %li<
                 %a{ href: "/bw-6960.html" } 风生水起
               %li<
@@ -89,9 +91,9 @@
               %li<
                 %a{ href: "/" } 枪柜系列
               %li<
-                %a{ href: "/" } 金融专业柜
+                %a{ href: "/cases/" } 金融专业柜
               %li<
-                %a{ href: "/" } 订造柜
+                %a{ href: "/cases/" } 订造柜
     {{ content }}
     %footer
       .left
