@@ -17,7 +17,7 @@
           %a{ id: "nav-catalog", href: "/" } 全能产品库
         %li{ class: "{% if page.belongs_to == 'about' %}active{% endif %}" }<
           %a{ id: "nav-about", href: "/about/" } 认识全能
-        %li{ class: "{% if page.belongs_to == 'cases' %}active{% endif %}" }<
+        %li{ class: "{% if page.url contains 'cases' %}active{% endif %}" }<
           %a{ id: "nav-cases", href: "/cases/" } 工程案例
         %li{ class: "{% if page.belongs_to == 'support' %}active{% endif %}" }<
           %a{ id: "nav-support", href: "/support/" } 服务与支持

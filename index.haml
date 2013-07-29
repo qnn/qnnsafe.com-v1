@@ -34,7 +34,9 @@ full_title: 全能保险柜官网-保险柜,保险箱,家用保险柜箱,保险�
   .sliderkit-panels
     {% for post in site.categories["news"] limit:300 %}
     .sliderkit-panel<
-      = '〔{{ post.type }}〕'
+      = '〔'
+      %a{ href: '/news/' }<> 新闻中心
+      〕
       %a{ href: '{{ post.url }}', title: '{{ post.title }}' } {{ post.title }}
       %span.date {{ post.date | date:"%Y年%m月%d日" }}
     {% endfor %}
