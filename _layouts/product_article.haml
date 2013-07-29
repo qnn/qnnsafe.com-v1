@@ -10,7 +10,7 @@ body_style: page
         %a{ href: "{{ post.url }}", title: "{{ post.title }}" }
           %img{ src: "http://test.html9.com/products/{{ post.images[0] }}" }
           %br
-          {{ post.title }}
+          {{ post.name }}
       {% endif %}{% endfor %}
     .nav
   .page_nav.is_pager
