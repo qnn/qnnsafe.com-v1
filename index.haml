@@ -5,7 +5,7 @@ full_title: 全能保险柜官网-保险柜,保险箱,家用保险柜箱,保险�
 %article#billboard
   .bb.active
     .link
-      %a{ href: "/b-5440.html" } B-5540
+      %a{ href: "{{ site.www.qnnsafe.com }}/b-5440.html" } B-5540
     .title.one
       %img{ src: "http://images.qnnsafe.com/v1/b5540_text_01.png" }
     .subtitle
@@ -13,7 +13,7 @@ full_title: 全能保险柜官网-保险柜,保险箱,家用保险柜箱,保险�
       %img{ src: "http://images.qnnsafe.com/v1/b5540_01.jpg" }
   .bb
     .link
-      %a{ href: "/gtx-5842.html" } GTX-5842
+      %a{ href: "{{ site.www.qnnsafe.com }}/gtx-5842.html" } GTX-5842
     .title
       %img{ src: "/assets/images/billboards/gtx-5842/title.png" }
     .subtitle
@@ -23,21 +23,21 @@ full_title: 全能保险柜官网-保险柜,保险箱,家用保险柜箱,保险�
 #promo
   %ul
     %li
-      %a{ href: "/", class: "promo_01" }
+      %a{ href: "{{ site.www.qnnsafe.com }}/", class: "promo_01" }
     %li
-      %a{ href: "/cases/", class: "promo_02" }
+      %a{ href: "{{ site.www.qnnsafe.com }}/cases/", class: "promo_02" }
     %li
-      %a{ href: "/stores/", class: "promo_03" }
+      %a{ href: "{{ site.www.qnnsafe.com }}/stores/", class: "promo_03" }
     %li
-      %a{ href: "/support/", class: "promo_04" }
+      %a{ href: "{{ site.www.qnnsafe.com }}/support/", class: "promo_04" }
 #newsslider.wide.sliderkit.newslider-minimal
   .left<
-    %a{ href: "/news/" }<> 新闻中心
+    %a{ href: "{{ site.www.qnnsafe.com }}/news/" }<> 新闻中心
   .sliderkit-panels
     {% for post in site.categories["news"] limit:300 %}
     .sliderkit-panel<
       = '〔{{ post.type }}〕'
-      %a{ href: '{{ post.url }}', title: '{{ post.title }}' } {{ post.title }}
+      %a{ href: '{{ site.www.qnnsafe.com }}{{ post.url }}', title: '{{ post.title }}' }<> {{ post.title }}
       %span.date {{ post.date | date:"%Y年%m月%d日" }}
     {% endfor %}
     

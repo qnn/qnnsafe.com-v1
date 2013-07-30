@@ -4,14 +4,19 @@ task :default do
   exec 'rake -T'
 end
 
-desc 'Build site (jekyll build)'
-task :build do
-  exec 'jekyll build'
+def puts_and_exec command
+  puts command
+  exec command
 end
 
-desc 'Preview on local machine (jekyll serve --watch)'
+desc 'Build site (production)'
+task :build do
+  puts_and_exec 'jekyll build --config _config.yml,_config.production.yml'
+end
+
+desc 'Preview and watch changes on local machine (development)'
 task :preview do
-  exec 'jekyll serve --watch'
+  puts_and_exec 'jekyll serve --watch'
 end
 
 def stores_json
