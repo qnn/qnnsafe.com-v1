@@ -319,12 +319,14 @@ background-position: 0 0;
     -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.35);
     -moz-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.35);
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.35);
-    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #06ACF1), color-stop(100%, #0075E2));
-    background-image: -webkit-linear-gradient(#06ACF1, #0075E2);
-    background-image: -moz-linear-gradient(#06ACF1, #0075E2);
-    background-image: -o-linear-gradient(#06ACF1, #0075E2);
-    background-image: -ms-linear-gradient(#06ACF1, #0075E2);
-    background-image: linear-gradient(#06ACF1, #0075E2);
+    background: #06acf1; /* Old browsers */
+    background: -moz-linear-gradient(top,  #06acf1 0%, #0075e2 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#06acf1), color-stop(100%,#0075e2)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #06acf1 0%,#0075e2 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #06acf1 0%,#0075e2 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #06acf1 0%,#0075e2 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #06acf1 0%,#0075e2 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#06acf1', endColorstr='#0075e2',GradientType=0 ); /* IE6-9 */
     display: inline-block;
     vertical-align: middle;
     height: 28px;

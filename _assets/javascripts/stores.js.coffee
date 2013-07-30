@@ -27,7 +27,7 @@ jQuery ($) ->
     "天津": ["天津"]
     "新疆": ["乌鲁木齐"]
     "云南": ["楚雄", "昆明", "瑞丽", "玉溪"]
-  if window.hasOwnProperty('STORES_SRC') and !window.hasOwnProperty('STORES') and $('#stores').length > 0
+  if Object.prototype.hasOwnProperty.call(window, 'STORES_SRC') and !Object.prototype.hasOwnProperty.call(window, 'STORES') and $('#stores').length > 0
     ifnone = $('#ifnone').clone();
     $.getScript STORES_SRC, ->
       $('#stores_count').html(window.STORES.length)
