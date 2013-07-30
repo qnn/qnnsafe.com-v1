@@ -8,7 +8,7 @@ body_style: page
       {% for post in site.categories["products"] reversed %}{% if post.type == page.type %}
       %li{ class: "{% if page.name == post.name %}current{% endif %}" }
         %a{ href: "{{ post.url }}", title: "{{ post.title }}" }
-          %img{ src: "http://test.html9.com/products/{{ post.images[0] }}" }
+          %img{ src: "http://www.qnnsafe.com/image-pro/{{ post.images[0] }}" }
           %br
           {{ post.name }}
       {% endif %}{% endfor %}
