@@ -25,7 +25,6 @@ line-height: 18px;
 font-size: 13px;
 color: #666;
 padding-top: 10px;
-padding-left: 10px;
 }
 .newslider-minimal .sliderkit-panel a{
 font-size: 13px;
@@ -42,4 +41,27 @@ float: left;
 color: #797979;
 font-size: 13px;
 font-weight: bold;
+}
+#newsslider .left {
+width: 88px;
+height: 38px;
+float: left;
+line-height: 38px;
+font-size: 13px;
+color: #000;
+margin-left: 3px;
+}
+#newsslider .left a{
+font-size: 13px;
+color: #666;
+text-decoration: none;
+}
+#newsslider .left a:hover{
+font-size: 13px;
+color: #005CE7;
+text-decoration: none;
+}
+#newsslider .sliderkit-panels {
+width: 905px;
+float: left;
 }
