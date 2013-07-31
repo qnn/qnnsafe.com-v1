@@ -167,6 +167,7 @@ desc 'Convert Markdown News to Haml News'
 task :md2haml do
   require 'maruku'
   require 'html2haml'
+  require 'fileutils'
   news = File.expand_path('../news/', __FILE__)
   Dir.chdir(news)
   sep = "\n---\n"
@@ -182,5 +183,6 @@ task :md2haml do
     File.open(markdown, 'w') do |file|
       file.write new_body
     end
+    FileUtils.mv markdown, markdown.sub(/.md$/,'.haml')
   end
 end
