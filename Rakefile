@@ -162,3 +162,25 @@ task :copy_old do
     end
   end
 end
+
+desc 'Convert Markdown News to Haml News'
+task :md2haml do
+  require 'maruku'
+  require 'html2haml'
+  news = File.expand_path('../news/', __FILE__)
+  Dir.chdir(news)
+  sep = "\n---\n"
+  markdowns = Dir.glob('**/*.md')
+  markdowns.each do |markdown|
+    file = IO.read(markdown)
+    file = file.split(sep)
+    head = file[0]
+    body = file[1]
+    html = Maruku.new(body).to_html
+    haml = Html2haml::HTML.new(html, {ruby19_style_attributes: true}).to_haml
+    new_body = head + sep + haml
+    File.open(markdown, 'w') do |file|
+      file.write new_body
+    end
+  end
+end
