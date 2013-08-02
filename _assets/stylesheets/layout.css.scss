@@ -43,7 +43,7 @@ header, nav {
 
 a.logo {
   display: block;
-  background: url(/assets/images/qnn-logo.png);
+  background: url(/assets/images/qnn-logo.png) no-repeat 0 0;
   width: 329px;
   height: 50px;
   text-indent: -9999px;
@@ -99,8 +99,7 @@ footer {
   }
   .right {
     float: right;
-    padding-top: 10px;
-    padding-right: 10px;
+    padding: 10px 10px 0 0;
     width: 200px;
     line-height: 30px;
   }

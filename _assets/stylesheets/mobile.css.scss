@@ -1,0 +1,79 @@
+@media only screen and (max-width: 320px) {
+  header, nav {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  header {
+    padding-top: 5px;
+    padding-bottom: 8px;
+  }
+
+  a.logo {
+    background: url(/assets/images/qnn-logo-smaller.png) no-repeat 0 0;
+    width: 304px;
+    height: 46px;
+  }
+
+  #promo ul li {
+    display: table-row;
+    height: 202px;
+  }
+
+  #newsslider {
+    .left {
+      display: none;
+    }
+    span.date {
+      display: none;
+    }
+  }
+
+  .newslider-minimal .sliderkit-panel{
+    width: 320px;
+  }
+
+  footer .right {
+    float: left;
+    padding: 10px 0 0 10px;
+  }
+
+  ul.nav li {
+    float: left;
+    width: 32.7%;
+    margin-top: 3px;
+    &:first-child {
+      width: 100%;
+      border-radius: 4px;
+      border-left: 1px solid rgba(9, 9, 9, 0.125);
+      border-right: 1px solid rgba(9, 9, 9, 0.125);
+      margin-top: 0;
+    }
+    &:nth-child(3n+2) {
+      border-radius: 4px 0 0 4px;
+      border-left: 1px solid rgba(9, 9, 9, 0.125);
+    }
+    &:nth-child(3n+4) {
+      border-radius: 0 4px 4px 0;
+    }
+  }
+
+  #billboard {
+    height: 520px;
+    .bb {
+      height: 520px;
+      .title {
+        top: 18px !important;
+      }
+      .subtitle {
+        display: none;
+      }
+      .image {
+        top: 170px;
+        img {
+          width: 280px;
+        }
+      }
+    }
+  }
+}
