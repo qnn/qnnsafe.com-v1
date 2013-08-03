@@ -57,7 +57,7 @@ task :convert do
     line = line.reverse.sub('","","', '","').reverse if line.count(',') == 10 # temp fix
     lines << line
   end
-  lines.delete_at(0)
+  # lines.delete_at(0)
   all_lines = lines.join(",\n")
   js = "/*{js}*/ window.STORES = /*{js}*/\n[\n#{all_lines}\n]"
   File.open(stores_json, 'w') do |file|
