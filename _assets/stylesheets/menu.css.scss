@@ -226,6 +226,10 @@ ul.nav {
   -moz-border-bottom-left-radius: 4px;
   -moz-border-bottom-right-radius: 4px;
 
+  .select_box {
+    display: none;
+  }
+
   ul.line {
     display: table;
     table-layout: fixed;
