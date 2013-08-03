@@ -54,7 +54,7 @@ jQuery ($) ->
         if (city.length > 0 and b[2] is city) or (city.length == 0 and b[1] is province)
           tr = $('<tr />')
           store_info = b.slice()
-          link = store_info.splice(-3,1)[0]
+          link = store_info.splice(-2,1)[0]
           if store_info.splice(-1,1)[0] == true
             tr.addClass('highlight')
           $.each store_info, (c, d) ->

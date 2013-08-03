@@ -44,7 +44,7 @@ task :convert do
 
   lines = []
   csv.each_line do |line|
-    line.sub!(/.*?,/, '')
+    # line.sub!(/.*?,/, '')
     line.sub!(/,$/, '')
     line.gsub!(/"(true|false)"/, '\1')
     line.gsub!(/,(\d+),/, ',"\1",')
