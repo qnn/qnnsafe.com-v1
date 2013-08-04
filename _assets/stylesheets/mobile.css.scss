@@ -9,6 +9,10 @@
 }
 
 @media only screen and (max-width: 480px) {
+  .hide_if_mobile {
+    display: none;
+  }
+
   header, nav {
     padding-left: 8px;
     padding-right: 8px;
@@ -46,9 +50,22 @@
     width: 320px;
   }
 
-  footer .right {
-    float: left;
-    padding: 10px 0 0 10px;
+  footer {
+    .left {
+      display: block;
+      float: none;
+      padding: 10px;
+      text-align: center;
+    }
+    .right {
+      float: none;
+      padding: 0 10px 11px;
+      display: block;
+      margin: 0 auto;
+    }
+    .beian {
+      display: inline-block;
+    }
   }
 
   ul.nav {
@@ -192,6 +209,50 @@
           display: none;
         }
       }
+    }
+  }
+
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+
+  thead tr, tfoot tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  .table-body > tr > td:before {
+    position: absolute;
+    top: 0px;
+    left: 6px;
+    width: 35%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  .table-body > tr > td {
+    border: none;
+    border-bottom: 1px solid #eee; 
+    position: relative;
+    padding-left: 40%;
+  }
+
+  .table-body > tr > td:first-child {
+    border-left: 0;
+  }
+
+  tr {
+    border: 1px solid #ccc;
+  }
+
+  table#manuals {
+    td:nth-of-type(1):before { content: "产品系列"; }
+    td:nth-of-type(2):before { content: "适用产品型号"; }
+    td:nth-of-type(3):before { content: "下载"; }
+    td:nth-of-type(2) {
+      font-size: 12px;
     }
   }
 

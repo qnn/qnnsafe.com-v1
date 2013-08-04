@@ -288,6 +288,11 @@ background-position: 0 0;
     margin: 18px 0 14px 0;
   }
 
+  img {
+    max-width: 90%;
+    height: auto;
+  }
+
   img.center {
     display: block;
     margin: 20px auto;
