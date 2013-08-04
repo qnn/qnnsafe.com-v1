@@ -3,11 +3,26 @@ jQuery ($) ->
     itemSelector : '.case_item'
   })
   $('#filters a').click (e) ->
-    e.preventDefault()
-    li = $(this).parent()
-    li.siblings('li').removeClass('active')
-    li.addClass('active')
-    $('#case_container').isotope({ filter: $(this).data('filter') })
-  $('.case_item a[rel=casesbox]').bind 'click', (e) ->
-    e.preventDefault()
-    TINY.box.show({ image: $(this).attr('href') })
+    if $(this).data('filter')
+      e.preventDefault()
+      li = $(this).parent()
+      li.siblings('li').removeClass('active')
+      li.addClass('active')
+      $('#case_container').isotope({ filter: $(this).data('filter') })
+  $(".case_item").magnificPopup
+    delegate: "a"
+    type: "image"
+    closeOnContentClick: false
+    closeBtnInside: false
+    mainClass: "mfp-with-zoom mfp-img-mobile"
+    image:
+      verticalFit: true
+      titleSrc: (item) ->
+        'good'
+    gallery:
+      enabled: true
+    zoom:
+      enabled: true
+      duration: 300
+      opener: (element) ->
+        element.find "img"
