@@ -1,7 +1,7 @@
 jQuery ($) ->
-  $('#case_container').isotope({
-    itemSelector : '.case_item'
-  })
+  $('#case_container').isotope
+    itemSelector: '.case_item'
+
   $('#filters a').click (e) ->
     if $(this).data('filter')
       e.preventDefault()
@@ -18,7 +18,7 @@ jQuery ($) ->
     image:
       verticalFit: true
       titleSrc: (item) ->
-        'good'
+        item.el.attr('title')
     gallery:
       enabled: true
     zoom:

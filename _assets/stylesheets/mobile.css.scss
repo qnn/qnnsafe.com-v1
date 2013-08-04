@@ -131,10 +131,11 @@
   .banner {
     visibility: hidden;
     height: 0;
-    margin-top: 30px;
+    margin-top: 25px;
   }
 
   .page_nav {
+    margin-top: 15px;
     a {
       padding: 0 24px;
       height: 32px;
@@ -170,6 +171,27 @@
 
   .h50px {
     height: 10px;
+  }
+
+  #case_container {
+    $size: 90px;
+    .case_item {
+      margin: 2px;
+      width: $size;
+      height: $size;
+      a {
+        display: block;
+        width: $size;
+        height: $size;
+        img {
+          width: $size;
+          height: $size;
+        }
+        .case_title {
+          display: none;
+        }
+      }
+    }
   }
 
 }
