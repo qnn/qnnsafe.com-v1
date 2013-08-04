@@ -7,6 +7,12 @@
 
 .banner-qnn {
   background: url(/assets/images/banners/qnn_wide.jpg) no-repeat center;
+//  @media only screen and (max-width: 480px) {
+//    background-position: -624px;
+//  }
+//  @media only screen and (max-width: 400px) {
+//    background-position: -720px;
+//  }
 }
 
 .banner-desert {
@@ -36,6 +42,10 @@
   background-position: 0 0;
   left: 50%;
   top: 40%;
+//  @media only screen and (max-width: 480px) {
+//    left: 25px;
+//    top: 57px;
+//  }
 }
 
 .banner-text-desert {
