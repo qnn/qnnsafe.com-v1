@@ -62,16 +62,18 @@ description: 全能公司致力于保险柜十大品牌创新研发保险柜、�
         联系电话：0757-22308195
   .block.h50px
 :javascript
-  if (Modernizr.cssanimations && $(window).width() > 480) {
-    $(".pageTop").css({opacity: 0}).each(function(i){
-      var val=i*200+'ms';
-      $(this).css({
-        '-webkit-animation-delay':val,
-        '-moz-animation-delay':val,
-        '-o-animation-delay':val,
-        'animation-delay':val
+  if (Modernizr.cssanimations) {
+    if ($(window).width() > 480) {
+      $(".pageTop").css({opacity: 0}).each(function(i){
+        var val=i*200+'ms';
+        $(this).css({
+          '-webkit-animation-delay':val,
+          '-moz-animation-delay':val,
+          '-o-animation-delay':val,
+          'animation-delay':val
+        });
       });
-    });
+    }
     $(function(){
       $(".pageTop").addClass("play");
     });
