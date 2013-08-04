@@ -146,9 +146,10 @@
     li {
       display: none;
     }
-    li.active, li.dropdown {
+    li.active {
       display: block;
       width: 200px;
+      border-left: 0;
     }
     li.dropdown {
       display: block;
