@@ -8,13 +8,9 @@ jQuery ($) ->
     e.preventDefault()
     that = $(this)
     if that.text() == '▼'
-      $('.page_nav').fadeOut 'fast', ->
-        that.parent('li').siblings().andSelf().addClass('dropshow')
-        that.text('▲')
-        $(this).fadeIn 'fast'
-        $('html, body').animate({ scrollTop: 100 }, 200)
+      that.parent('li').siblings().andSelf().addClass('dropshow')
+      that.text('▲')
+      $('html, body').animate({ scrollTop: 100 }, 200)
     else
-      $('.page_nav').fadeOut 'fast', ->
-        that.parent('li').siblings().andSelf().removeClass('dropshow')
-        that.text('▼')
-        $(this).fadeIn 'fast'
+      that.parent('li').siblings().andSelf().removeClass('dropshow')
+      that.text('▼')
