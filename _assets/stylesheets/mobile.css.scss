@@ -256,6 +256,29 @@
     }
   }
 
+  table#stores-list {
+    td:nth-of-type(1):before { content: "店铺名称"; }
+    td:nth-of-type(2):before { content: "省份"; }
+    td:nth-of-type(3):before { content: "城市"; }
+    td:nth-of-type(4):before { content: "县/区"; }
+    td:nth-of-type(5):before { content: "地址"; }
+    td:nth-of-type(6):before { content: "联系电话"; }
+    td:nth-of-type(7):before { content: "联系人"; }
+    tr#ifnone {
+      td:nth-of-type(1):before { display: none; }
+      td {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+    }
+    .table-body > tr > td:before {
+      width: 25%;
+    }
+    .table-body > tr > td {
+      padding-left: 30%;
+    }
+  }
+
 }
 
 .button {

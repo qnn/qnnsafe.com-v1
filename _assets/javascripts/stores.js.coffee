@@ -30,6 +30,11 @@ jQuery ($) ->
     "重庆": ["重庆"]
   if Object.prototype.hasOwnProperty.call(window, 'STORES_SRC') and !Object.prototype.hasOwnProperty.call(window, 'STORES') and $('#stores').length > 0
     ifnone = $('#ifnone').clone();
+    isdesktop = ->
+      $(window).width() > 480
+    return_none = ->
+      $('#stores-list tbody').empty().append(ifnone)
+      $('#stores_count').html(window.STORES.length)
     $.getScript STORES_SRC, ->
       $('#stores_count').html(window.STORES.length)
     $.each index, (a,b) ->
@@ -40,16 +45,25 @@ jQuery ($) ->
       if province.length > 0 and index.hasOwnProperty(province)
         $.each index[province], (a,b) ->
           $('#city').append('<option value="'+b+'">'+b+'</option>')
+        city_triggered = false
         if index[province].length == 1
           $('#city').val(index[province][0])
-        $('#city').trigger('change')
+          unless isdesktop() # do not show all records in province if using mobile browsers
+            $('#city').trigger('change')
+            city_triggered = true
+        if isdesktop() # show all records in province if using desktop browser
+          $('#city').trigger('change')
+        else if city_triggered == false
+          return_none()
       else
-        $('#stores-list tbody').empty().append(ifnone)
-        $('#stores_count').html(window.STORES.length)
+        return_none()
     $('#city').change ->
       $('#stores-list tbody').empty()
       province = $('#province').val()
       city = $('#city').val()
+      if city == '' and !isdesktop()
+        return_none()
+        return
       $.each window.STORES, (a,b) ->
         if (city.length > 0 and b[2] is city) or (city.length == 0 and b[1] is province)
           tr = $('<tr />')
