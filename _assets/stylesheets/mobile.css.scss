@@ -212,6 +212,10 @@
     }
   }
 
+  .select {
+    @include no_select;
+  }
+
   table, thead, tbody, th, td, tr {
     display: block;
   }
