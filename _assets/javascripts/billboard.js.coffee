@@ -16,7 +16,7 @@ jQuery ($) ->
     title_left = $('.title', active).css('left')
     if $(window).width() <= 480
       half = $('.title', active).width() / -2
-      $('.title', active).css({ left: '50%', 'margin-left': half }).delay(500).animate { opacity: 1 }, 200, ->
+      $('.title', active).css({ left: '50%', 'margin-left': half }).animate { opacity: 1 }, 200, ->
         half = $('.image', active).width() / -2
         $('.image', active).css({ right: '50%', 'margin-right': half }).animate { opacity: 1 }, 200, ->
           setTimeout ->
@@ -29,7 +29,7 @@ jQuery ($) ->
                   loop_reset active
           , 4000
     else
-      $('.image', active).delay(500).animate { right: "+=50", opacity: 1  }, 200, ->
+      $('.image', active).animate { right: "+=50", opacity: 1  }, 200, ->
         $('.title', active).animate { left: "-=50", opacity: 1  }, 200, ->
           $('.subtitle', active).animate({ left: "-=50", opacity: 1  })
           setTimeout ->
@@ -41,4 +41,4 @@ jQuery ($) ->
                   $('.title', active).css('left', title_left)
                   loop_reset active
           , 4000
-  loopslider()
+  setTimeout loopslider, 500

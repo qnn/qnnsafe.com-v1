@@ -44,6 +44,9 @@ color: #797979;
 font-size: 13px;
 font-weight: bold;
 }
+#newsslider {
+width: 100%;
+}
 #newsslider .left {
 width: 57px;
 height: 38px;
