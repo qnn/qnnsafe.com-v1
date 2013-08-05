@@ -71,6 +71,7 @@ ul.nav {
       z-index: 2;
       text-decoration: none !important;
       white-space: nowrap;
+      text-overflow: ellipsis;
       &:hover {
         background: #F1F1F1;
         background: rgba(124, 124, 124, 0.17);
