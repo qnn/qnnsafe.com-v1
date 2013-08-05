@@ -51,7 +51,7 @@ float: left;
 line-height: 38px;
 font-size: 13px;
 color: #000;
-margin-left: 3px;
+margin-left: 11px;
 }
 #newsslider .left a{
 font-size: 13px;
@@ -64,6 +64,6 @@ color: #005CE7;
 text-decoration: none;
 }
 #newsslider .sliderkit-panels {
-width: 905px;
+width: 80%;
 float: left;
 }

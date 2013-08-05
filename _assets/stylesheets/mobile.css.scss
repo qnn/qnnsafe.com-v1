@@ -8,6 +8,22 @@
   -webkit-tap-highlight-color:rgba(0,0,0,0);
 }
 
+@media only screen and (min-width: 340px) and (max-width: 640px) {
+  #promo ul {
+    display: block;
+    overflow: auto;
+    li {
+      float: left;
+      width: 50%;
+      display: block;
+      padding: 2px 0 0;
+      a {
+        width: 99%;
+      }
+    }
+  }
+}
+
 @media only screen and (max-width: 480px) {
   .hide_if_mobile {
     display: none;
