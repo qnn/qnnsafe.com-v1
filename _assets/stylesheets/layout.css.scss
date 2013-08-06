@@ -49,6 +49,10 @@ header, nav {
   clear: both;
 }
 
+.show_if_mobile {
+  display: none;
+}
+
 a.logo {
   display: block;
   background: url(/assets/images/qnn-logo.png) no-repeat 0 0;

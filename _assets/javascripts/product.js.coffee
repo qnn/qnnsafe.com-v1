@@ -1,4 +1,20 @@
 jQuery ($) ->
+  if (window.screen && window.screen.width > 480)
+    children = $('#product_menu > ul.ddmenu > li').length
+    count = Math.ceil(children / 6)
+    for page in [1..count]
+      ul = $('<ul />').appendTo('#showcase')
+      for item in [(page-1)*6..page*6-1]
+        child = $('#product_menu > ul.ddmenu > li').eq(item)
+        if child.length == 1
+          ul.append(child.clone())
+    if children <= 6
+      $('#showcase').addClass('shorter')
+    $('#showcase').append('<div class="nav"></div>')
+    if count > 1
+      for page in [1..count]
+        $('#showcase .nav').append('<a href="#">'+page+'</a>')
+    $('#showcase').catslider()
   $('.page_nav.is_pager').find('li:not(.dropdown)').find('a').click (e) ->
     e.preventDefault()
     $(this).parent().siblings('li').removeClass('active')

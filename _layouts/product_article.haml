@@ -3,7 +3,8 @@ layout: default
 body_style: page
 ---
 %article.fill
-  .product_header
+  #showcase.mi-slider.hide_if_mobile
+  .product_header.show_if_mobile
     %img{ src: "http://www.qnnsafe.com/image-pro/{{ page.images[0] }}" }
     #product_menu.dropdownmenu
       %a.btn{ href: "{{ page.url }}" } {{ page.type }}{{ page.name }}
