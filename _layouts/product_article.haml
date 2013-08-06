@@ -4,31 +4,28 @@ body_style: page
 ---
 %article.fill
   .product_header
-    .ph_left
-      %img{ src: "http://www.qnnsafe.com/image-pro/{{ page.images[0] }}" }
-      #product_menu.dropdownmenu
-        %a.btn{ href: "{{ page.url }}" } {{ page.type }}{{ page.name }}
-        %a.btn.toggle More
-        %ul.ddmenu
-          {% for post in site.categories["products"] reversed %}{% if post.type == page.type %}
-          %li{ class: "{% if page.name == post.name %}current{% endif %}" }
-            %a{ href: "{{ post.url }}", title: "{{ post.title }}" }
-              %span.img
-                %img{ src: "http://www.qnnsafe.com/image-pro/{{ post.images[0] }}" }
-              %span.text {{ post.name }}
-          {% endif %}{% endfor %}
-    .page_nav.is_pager.ph_right
-      %ul
-        %li.active
-          %a{ href: "#" } 产品概览
-        %li
-          %a{ href: "#" } 同系列产品对比
-        %li
-          %a{ href: "#" } 常见问题
-        %li.dropdown
-          %a{ href: "#" } ▼
-    .clear
-  .split.top_divider
+    %img{ src: "http://www.qnnsafe.com/image-pro/{{ page.images[0] }}" }
+    #product_menu.dropdownmenu
+      %a.btn{ href: "{{ page.url }}" } {{ page.type }}{{ page.name }}
+      %a.btn.toggle More
+      %ul.ddmenu
+        {% for post in site.categories["products"] reversed %}{% if post.type == page.type %}
+        %li{ class: "{% if page.name == post.name %}current{% endif %}" }
+          %a{ href: "{{ post.url }}", title: "{{ post.title }}" }
+            %span.img
+              %img{ src: "http://www.qnnsafe.com/image-pro/{{ post.images[0] }}" }
+            %span.text {{ post.name }}
+        {% endif %}{% endfor %}
+  .page_nav.is_pager
+    %ul
+      %li.active
+        %a{ href: "#" } 产品概览
+      %li
+        %a{ href: "#" } 同系列产品对比
+      %li
+        %a{ href: "#" } 常见问题
+      %li.dropdown
+        %a{ href: "#" } ▼
   {% if page.features %}
   .pages.narrow
     #product_details
