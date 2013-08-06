@@ -412,7 +412,9 @@ a.btn {
       height: inherit;
       line-height: 28px;
       border-radius: 3px 0 0 3px;
-      padding: 0 12px;
+      padding: 0 3px;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
     .toggle {
       width: 29px;
@@ -450,7 +452,7 @@ a.btn {
 }
 
 .dropdownmenu {
-  &:hover > .toggle, &.open > .toggle {
+  &:hover > .btn, &.open > .btn {
     background: #e8e8e8;
     background-image: linear-gradient(tobottom, #e8e8e8, #fafafa);
     -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.15), 0 1px rgba(255, 255, 255, 0.1);
@@ -459,7 +461,7 @@ a.btn {
   }
 }
 
-$imgsize: 60px;
+$imgsize: 50px;
 
 .ddmenu {
   display: none;
@@ -515,7 +517,7 @@ $imgsize: 60px;
         height: ($imgsize + 10);
         vertical-align: top;
         line-height: ($imgsize + 10);
-        width: 85px;
+        width: 91px;
         font-size: 12px;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -544,7 +546,7 @@ $imgsize: 60px;
   }
 }
 
-.dropdownmenu:hover>.ddmenu, .dropdownmenu.open>.ddmenu {
+.dropdownmenu.open>.ddmenu {
   display: block;
 }
 

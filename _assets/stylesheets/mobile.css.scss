@@ -178,6 +178,7 @@
 
   .page_nav {
     margin-top: 15px;
+    margin-bottom: 15px;
     a {
       padding: 0 24px;
       height: 35px;
@@ -325,6 +326,19 @@
 
   #allmap {
     height: 300px !important;
+  }
+
+  .narrow {
+    width: 100%;
+    margin: 0;
+  }
+
+  #product_details {
+    height: 300px;
+  }
+
+  #faq {
+    padding: 10px;
   }
 
 }
