@@ -6,7 +6,14 @@
     <meta name="keywords" content="{% if page.keywords %}{{ page.keywords }}{% else %}{{ site.keywords }}{% endif %}">
     <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html','' }}">
+    <link href="/favicon.ico" rel="shortcut icon">
+    <link href="/assets/images/qnn-icon-152.png" rel="icon">
+    <link rel="apple-touch-icon" href="/assets/images/qnn-icon-152.png">
+    <meta name="apple-mobile-web-app-title" content="全能保险柜">
+    <meta name="msapplication-TileImage" content="/assets/images/qnn-icon-152.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
     %script{ type: "text/javascript", src: "/assets/vendor/javascripts/jquery-1.10.2.min.js" }
     {% javascript application %}
     {% stylesheet application %}
