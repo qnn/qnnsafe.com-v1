@@ -358,4 +358,51 @@
     padding: 10px;
   }
 
+  .cc {
+    height: auto;
+    position: static;
+
+    .title {
+      position: static;
+      margin: 20px 10px;
+      img {
+        max-width: 96%;
+        height: auto;
+        margin: 0 auto;
+        display: block;
+      }
+    }
+    .image {
+      position: static;
+      margin: 20px 10px;
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+    .hover {
+      display: none;
+    }
+  }
+
+  .cc-l2r, .cc-r2l {
+    height: auto;
+    .image {
+      position: static;
+      font-size: 0;
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+    .title {
+      position: static;
+      margin: 10px 0 10px 10px;
+      img {
+        max-width: 96%;
+        height: auto;
+      }
+    }
+  }
+
 }
