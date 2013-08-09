@@ -44,4 +44,4 @@ jQuery ($) ->
   , ->
     $(this).find('.hover').addClass('hidden')
 
-  $("#product_details").panzoom()
+  $("#features").panzoom()

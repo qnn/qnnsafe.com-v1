@@ -29,7 +29,8 @@ body_style: page
         %a{ href: "#" } ▼
   {% if page.features %}
   .pages.narrow
-    #product_details
+    #features
+      .tips.show_if_mobile 提示：你可以拖动和捏合缩放此图片。
       {{ page.features | replace:'%PRODIMGS%',site.prodimgs }}
     #compare.hidden
       {{ content }}
