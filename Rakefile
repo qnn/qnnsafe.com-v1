@@ -54,6 +54,7 @@ task :convert do
     line.chomp!
     line = "[#{line}]"
     line.sub!(',]', ',false]') # temp fix
+    line.sub!('.com"]', '.com",false]') # temp fix
     line = line.reverse.sub('","","', '","').reverse if line.count(',') == 10 # temp fix
     lines << line
   end
