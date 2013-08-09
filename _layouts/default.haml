@@ -23,7 +23,9 @@
     %nav
       %ul.nav
         %li<
-          %a{ id: "nav-catalog", href: "{{ site.www.qnnsafe.com }}/" } 全能产品库
+          %a{ id: "nav-catalog", href: "{{ site.www.qnnsafe.com }}/" }
+            全能产品库
+            %span.triangle-down
         %li{ class: "{% if page.belongs_to == 'about' %}active{% endif %}" }<
           %a{ id: "nav-about", href: "{{ site.www.qnnsafe.com }}/about/" } 认识全能
         %li{ class: "{% if page.url contains 'cases' %}active{% endif %}" }<
