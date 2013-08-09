@@ -7,10 +7,10 @@ jQuery ($) ->
   $('.page_nav li.dropdown a').bind 'click', (e) ->
     e.preventDefault()
     that = $(this)
-    if that.text() == '▼'
+    if that.find('.triangle').hasClass('down')
       that.parent('li').siblings().andSelf().addClass('dropshow')
-      that.text('▲')
+      that.find('.triangle').removeClass('down').addClass('up')
       $('html, body').animate({ scrollTop: 100 }, 200)
     else
       that.parent('li').siblings().andSelf().removeClass('dropshow')
-      that.text('▼')
+      that.find('.triangle').removeClass('up').addClass('down')

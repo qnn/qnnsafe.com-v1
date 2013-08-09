@@ -22,7 +22,8 @@ description: 在这里我们会为您展示更多最新的关于全能保险柜�
       %li
         %a{ href: "/news/industry-news/" } 行业新闻
       %li.dropdown
-        %a{ href: "#" } ▼
+        %a{ href: "#" }
+          %span.triangle.down
   #newslist.center_content
     %ul
       {% for post in site.categories["news"] %}

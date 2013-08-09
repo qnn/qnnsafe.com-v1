@@ -18,7 +18,8 @@ body_style: page
       %li{ class: "{% if page.type_eng == 'industry-news' %}active{% endif %}" }
         %a{ href: "/news/industry-news/" } 行业新闻
       %li.dropdown
-        %a{ href: "#" } ▼
+        %a{ href: "#" }
+          %span.triangle.down
   #newslist.center_content
     %ul
       {% for post in site.categories["news"] %}{% if post.type_eng == page.type_eng %}
