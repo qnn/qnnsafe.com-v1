@@ -329,8 +329,13 @@
   }
 
   .narrow {
-    width: 100%;
+    width: auto;
     margin: 0;
+    padding: 0 10px;
+  }
+
+  #faq {
+    padding-bottom: 15px;
   }
 
   #features {
@@ -352,10 +357,6 @@
       -webkit-box-shadow: inset 0 1px #FCFCFC,0 1px 1px rgba(0, 0, 0, 0.05);
       box-shadow: inset 0 1px #FCFCFC,0 1px 1px rgba(0, 0, 0, 0.05);
     }
-  }
-
-  #faq {
-    padding: 10px;
   }
 
   .cc {
@@ -403,6 +404,15 @@
         height: auto;
       }
     }
+  }
+
+  table#compare_table {
+    margin: 30px 0 30px;
+    td:nth-of-type(1):before { content: "型号"; }
+    td:nth-of-type(2):before { content: "尺寸"; }
+    td:nth-of-type(3):before { content: "门（厚度）"; }
+    td:nth-of-type(4):before { content: "箱（厚度）"; }
+    td:nth-of-type(5):before { content: "净重"; }
   }
 
 }
