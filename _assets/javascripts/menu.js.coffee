@@ -35,14 +35,18 @@ jQuery ($) ->
       close_catalog(that)
 
   # fill catalog select
+  selected = $('#catalog_select').data('selected')
   $('#catalog .line a').each ->
     option = $('<option />', { text: $(this).text(), value: $(this).attr('href') })
     a = $(this).closest('.line > li').index()
     index = $(this).parent().index()
     option.data('bgpos', (a * sc_size) + 'px ' + (index * sc_size) + 'px')
+    if selected == $(this).text()
+      option.prop('selected', true)
     $('#catalog_select').append(option)
   $('#catalog_select').change ->
     $(this).closest('.select_box').find('.figure').css('background-position', $('option:checked', this).data('bgpos'))
+  .trigger('change')
   $('#catalog_go').click (e) ->
     e.preventDefault()
     window.location.href = $('#catalog_select').val()

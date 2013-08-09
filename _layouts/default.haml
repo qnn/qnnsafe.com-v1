@@ -106,7 +106,7 @@
         .select_box
           .figure
           .select
-            %select#catalog_select
+            %select#catalog_select{ data: { selected: "{{ page.type }}" } }
           .buttons
             %a#catalog_go.button{ href: "#" } 前往产品页
     {{ content }}
