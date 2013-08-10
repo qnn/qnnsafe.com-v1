@@ -5,7 +5,7 @@ body_style: page
 %article.fill
   #showcase.mi-slider.hide_if_mobile
   .product_header.show_if_mobile
-    %img{ src: "http://www.qnnsafe.com/image-pro/{{ page.images[0] }}" }
+    %img{ src: "{{ site.prodimgs }}/{{ page.images[0] }}" }
     #product_menu.dropdownmenu
       %a.btn{ href: "{{ page.url }}" } {{ page.type }}{{ page.name }}
       %a.btn.toggle More
@@ -14,7 +14,7 @@ body_style: page
         %li{ class: "{% if page.name == post.name %}current{% endif %}" }
           %a{ href: "{{ post.url }}", title: "{{ post.title }}" }
             %span.img
-              %img{ src: "http://www.qnnsafe.com/image-pro/{{ post.images[0] }}" }
+              %img{ src: "{{ site.prodimgs }}/{{ post.images[0] }}" }
             %span.text {{ post.name }}
         {% endif %}{% endfor %}
   .page_nav.is_pager
