@@ -11,22 +11,22 @@ body_style: page
       %a.btn.toggle More
       %ul.ddmenu
         {% for post in site.categories["products"] reversed %}{% if post.type == page.type %}
-        %li{ class: "{% if page.name == post.name %}current{% endif %}" }
+        %li{ class: "{% if page.name == post.name %}current{% endif %}" }>
           %a{ href: "{{ post.url }}", title: "{{ post.title }}" }
-            %span.img
+            %span.img<
               %img{ src: "{{ site.prodimgs }}/{{ post.images[0] }}" }
             %span.text {{ post.name }}
         {% endif %}{% endfor %}
   .page_nav.is_pager
     %ul
-      %li.active
+      %li.active<
         %a{ href: "#" } 产品概览
-      %li
+      %li<
         %a{ href: "#" } 同系列产品对比
-      %li
+      %li<
         %a{ href: "#" } 常见问题
-      %li.dropdown
-        %a{ href: "#" }
+      %li.dropdown<
+        %a{ href: "#" }<
           %span.triangle.down
   {% if page.features %}
   .pages.narrow
