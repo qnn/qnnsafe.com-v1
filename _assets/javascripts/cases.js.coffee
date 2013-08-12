@@ -26,3 +26,11 @@ jQuery ($) ->
       duration: 300
       opener: (element) ->
         element.find "img"
+
+  $('#weixin').magnificPopup
+    type: "image"
+    zoom:
+      enabled: true
+      duration: 300
+      opener: (element) ->
+        element

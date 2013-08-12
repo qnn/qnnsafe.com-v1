@@ -67,6 +67,26 @@
   }
 }
 
+@media only screen and (max-width: 680px) {
+  footer {
+    .left {
+      display: block;
+      float: none;
+      padding: 10px;
+      text-align: center;
+    }
+    .right {
+      float: none;
+      padding: 0 10px 11px;
+      display: block;
+      margin: 0 auto;
+    }
+    .beian {
+      display: inline-block;
+    }
+  }
+}
+
 @media only screen and (min-width: 550px) and (max-width: 680px) {
   #nav-catalog {
     .triangle-down {
@@ -227,24 +247,6 @@
 
   .newslider-minimal .sliderkit-panel{
     width: 320px;
-  }
-
-  footer {
-    .left {
-      display: block;
-      float: none;
-      padding: 10px;
-      text-align: center;
-    }
-    .right {
-      float: none;
-      padding: 0 10px 11px;
-      display: block;
-      margin: 0 auto;
-    }
-    .beian {
-      display: inline-block;
-    }
   }
 
   ul.nav {
