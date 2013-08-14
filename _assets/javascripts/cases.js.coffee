@@ -27,7 +27,7 @@ jQuery ($) ->
       opener: (element) ->
         element.find "img"
 
-  $('#weixin').magnificPopup
+  $('.social-media').magnificPopup
     type: "image"
     zoom:
       enabled: true

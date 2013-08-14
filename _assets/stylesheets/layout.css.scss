@@ -112,7 +112,7 @@ footer {
   .right {
     float: right;
     padding: 10px 10px 0 0;
-    width: 260px;
+    width: 185px;
     line-height: 30px;
   }
   .clear {
@@ -145,6 +145,12 @@ background-position: 0 0;
   height: 32px;
   border-left: 1px solid #CCC;
   margin-left: 8px;
+}
+
+.lang-weibo {
+  background-position: -45px -37px;
+  width: 42px;
+  height: 32px;
 }
 
 .hidden {
