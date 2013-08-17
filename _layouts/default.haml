@@ -28,13 +28,13 @@
             %span.triangle-down<>
         %li{ class: "{% if page.belongs_to == 'about' %}active{% endif %}" }<
           %a{ id: "nav-about", href: "{{ site.www.qnnsafe.com }}/about/" } 认识全能
-        %li{ class: "{% if page.url contains 'cases' %}active{% endif %}" }<
+        %li{ class: "{% if page.belongs_to == 'cases' %}active{% endif %}" }<
           %a{ id: "nav-cases", href: "{{ site.www.qnnsafe.com }}/cases/" } 工程案例
         %li{ class: "{% if page.belongs_to == 'support' %}active{% endif %}" }<
           %a{ id: "nav-support", href: "{{ site.www.qnnsafe.com }}/support/" } 服务与支持
         %li<
           %a{ id: "nav-franchise", target: "_blank" } 招商加盟
-        %li{ class: "{% if page.url contains '/stores/' %}active{% endif %}" }<
+        %li{ class: "{% if page.belongs_to == 'network' %}active{% endif %}" }<
           %a{ id: "nav-stores", href: "{{ site.www.qnnsafe.com }}/network/" } 销售网点
         %li{ class: "{% if page.belongs_to == 'contact' %}active{% endif %}" }<
           %a{ id: "nav-contact", href: "{{ site.www.qnnsafe.com }}/contact/" } 联系我们
