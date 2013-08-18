@@ -330,6 +330,10 @@
     visibility: hidden;
     height: 0;
     margin-top: 25px;
+    background: none;
+    .banner-text {
+      background: none;
+    }
   }
 
   .page_nav {

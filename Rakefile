@@ -11,12 +11,12 @@ end
 
 desc 'Build site (production)'
 task :build do
-  puts_and_exec 'jekyll build --config _config.yml,_config.production.yml'
+  puts_and_exec 'jekyll build --config _config.yml,_config.production.yml --trace'
 end
 
 desc 'Preview and watch changes on local machine (development)'
 task :preview do
-  puts_and_exec 'jekyll serve --watch'
+  puts_and_exec 'jekyll serve --watch --trace'
 end
 
 def stores_json
