@@ -1,0 +1,42 @@
+---
+permalink: /weixin/products/
+---
+!!!
+%html.no-js
+  %head
+    %meta{ charset: "UTF-8" }
+    %title 产品中心
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link href="/favicon.ico" rel="shortcut icon">
+    <link href="/assets/images/qnn-icon-152.png" rel="icon">
+    <link rel="apple-touch-icon" href="/assets/images/qnn-icon-152.png">
+    <meta name="apple-mobile-web-app-title" content="全能保险柜">
+    <meta name="msapplication-TileImage" content="/assets/images/qnn-icon-152.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="robots" content="noindex">
+    {% stylesheet weixin/weixin %}
+  %body
+    .msg-wrapper
+      .msg-container
+        %a.msg-item{ href: "/" }
+          %span.msg-big-img
+            %img{ src: "/assets/images/weixin/quanjiafu.jpg" }
+            %span.msg-big-img-text 全能家族 全能冠军
+        %a.msg-item{ href: "/bw-6960.html" }
+          %span.msg-text 【全能风生水起】 中国首款风水保险柜
+          %span.msg-img
+            %img{ src: "/assets/images/weixin/bw.jpg" }
+        %a.msg-item{ href: "/bw-6960.html" }
+          %span.msg-text 【全能指点江山】 指点江山，运筹帷幄
+          %span.msg-img
+            %img{ src: "/assets/images/weixin/zf.jpg" }
+        %a.msg-item{ href: "/bw-6960.html" }
+          %span.msg-text 【全能钢将军】 实用为王，储物更自如
+          %span.msg-img
+            %img{ src: "/assets/images/weixin/fg.jpg" }
+        %a.msg-item{ href: "/bw-6960.html" }
+          %span.msg-text 【全能金库】 防盗技术 全球领先
+          %span.msg-img
+            %img{ src: "/assets/images/weixin/b.jpg" }
+        %a.msg-item{ href: "/" }
+          %span.msg-text-only 查看更多产品...
