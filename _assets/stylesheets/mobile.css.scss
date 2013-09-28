@@ -457,4 +457,15 @@
       width: 50%;
     }
   }
+
+  #finder-filter {
+    .panel {
+      margin: 0 0 12px 0;
+      padding: 6px 7px;
+      display: block;
+      h3 {
+        margin-left: -8px;
+      }
+    }
+  }
 }

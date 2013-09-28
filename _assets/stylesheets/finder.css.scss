@@ -1,11 +1,13 @@
 #finder-filter {
   padding: 30px 15px;
   font-size: 14px;
+  text-align: center;
   a {
     color: blue;
     text-decoration: none;
   }
   .panel {
+    text-align: left;
     -webkit-border-radius: 8px;
     -moz-border-radius: 8px;
     -ms-border-radius: 8px;

@@ -9,6 +9,7 @@ jQuery ($) ->
       $(b).find('span.value').text(active.text())
     $('#finder').isotope({ filter: filter })
   $('#finder-filter a').click (e) ->
+    e.preventDefault()
     $(this).siblings().removeClass('active')
     $(this).addClass('active')
     update_filter()
