@@ -89,6 +89,21 @@ task :convert do
   end
 end
 
+desc 'generate finder content'
+task :nope do
+  newa = Dir.glob('products/_posts/*.haml').map do |f|
+    File.basename(f).sub(/^\d+\-\d+\-\d+\-/, '').sub(/\.haml$/, '')
+  end
+  newa.sort.each do |n|
+    puts '  .item'
+    puts '    %a{ href: "{{ site.www.qnnsafe.com }}/' + n + '.html" }'
+    puts '      %img{ src: "{{ site.pimgs }}/' + n + '-01.jpg" }'
+    file = Dir.glob('./products/_posts/*' + n + '.haml')
+    file = IO.read(file[0])
+    puts '      .item_title ' + file[/type:(.*)/, 1].strip + file[/name:(.*)/, 1].strip
+  end
+end
+
 # desc 'Beautify stores.js'
 # task :beautify do
 #   stores = get_stores
