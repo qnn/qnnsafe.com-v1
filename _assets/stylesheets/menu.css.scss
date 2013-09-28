@@ -271,3 +271,16 @@ $navHeight: 30px;
     border-bottom: 5px solid #5D5D5D;
   }
 }
+
+.catelog_bottom {
+  padding: 0 16px 12px;
+  text-align: right;
+  a {
+    font-size: 14px;
+    color: blue;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
