@@ -12,6 +12,10 @@ RewriteRule ^(.*)$ http://www.qnnsafe.com/ [L,R=301]
 RewriteCond %{http_host} ^qnnsafe.com [nc]
 RewriteRule ^(.*)$ http://www.qnnsafe.com/$1 [L,R=301]
 
+# non-index redirects to www
+RewriteCond %{http_host} ^www.qnnsafe.com/index.html [nc]
+RewriteRule ^(.*)$ http://www.qnnsafe.com/$1 [L,R=301]
+
 # compress html, js and css files
 <ifmodule mod_deflate.c>
 AddOutputFilter DEFLATE html js css
