@@ -3,7 +3,7 @@ layout: nil
 in_sitemap: no
 permalink: /assets/xml/virtual_tour.xml
 ---
-<?xml version='1.0' encoding='utf-8' ?>
+<?xml version="1.0" encoding="utf-8" ?>
 %krpano{onstart: "startup();", title: "Virtual Tour", version: "1.16"}
   %style{distorted: "true", edge: "top", name: "skin_hotspotstyle", onclick: "if(linkedscene, tween(scale,0.25,0.5); tween(oy,-20,0.5); tween(alpha,0,0.5); looktohotspot(); loadscene(get(linkedscene),null,MERGE,BLEND(1)); skin_updatescroll(); );", onhover: "if(skin_settings.tooltips_hotspots, if(linkedscene, showtext(get(scene[get(linkedscene)].title),SKIN_TOOLTIPS)) );", oy: "0", scale: "0.5", url: "/assets/images/vtourskin_hotspot.png"}
   %action{name: "startup"}
