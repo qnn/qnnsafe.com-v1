@@ -3,5 +3,6 @@ Disallow: /assets/
 Disallow: /images/
 Disallow: /logreport/
 Disallow: /favicon.ico
+Disallow: /crossdomain.xml
 
 Sitemap: http://www.qnnsafe.com/Sitemap.xml
