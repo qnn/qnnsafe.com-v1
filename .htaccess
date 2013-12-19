@@ -23,3 +23,6 @@ AddOutputFilter DEFLATE html js css
 
 # remove useless header
 Header unset X-UA-Compatible
+
+# additional info
+Header set Source "https://github.com/qnn/qnnsafe.com-v1.git"
